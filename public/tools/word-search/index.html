@@ -288,7 +288,192 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
-    document.getElementById('word-input').addEventListener('keydown', (e) => {
+    let words = [];
+    let currentGrid = null;
+    let currentRows = 10;
+    let currentCols = 10;
+
+    function addWord() {
+      const input = document.getElementById('word-input');
+      const word = input.value.trim().toUpperCase().replace(/[^A-Z]/g, '');
+      input.value = '';
+      if (!word) return;
+      if (words.includes(word)) return;
+      words.push(word);
+      renderWordChips();
+    }
+
+    function removeWord(index) {
+      words.splice(index, 1);
+      renderWordChips();
+    }
+
+    function renderWordChips() {
+      const container = document.getElementById('word-chips');
+      container.innerHTML = words.map((w, i) =>
+        `<span class="chip">${w}<button class="chip-remove" onclick="removeWord(${i})" aria-label="Remove ${w}">×</button></span>`
+      ).join('');
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('error-msg');
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+
+    function hideError() {
+      document.getElementById('error-msg').style.display = 'none';
+    }
+
+    function getEnabledDirections() {
+      const horiz = document.getElementById('opt-horizontal').checked;
+      const vert  = document.getElementById('opt-vertical').checked;
+      const diag  = document.getElementById('opt-diagonal').checked;
+      const back  = document.getElementById('opt-backward').checked;
+      const dirs  = [];
+      if (horiz)         dirs.push({ dr: 0,  dc:  1 });
+      if (horiz && back) dirs.push({ dr: 0,  dc: -1 });
+      if (vert)          dirs.push({ dr: 1,  dc:  0 });
+      if (vert  && back) dirs.push({ dr: -1, dc:  0 });
+      if (diag)          dirs.push({ dr: 1,  dc:  1 }, { dr: 1, dc: -1 });
+      if (diag  && back) dirs.push({ dr: -1, dc:  1 }, { dr: -1, dc: -1 });
+      return dirs;
+    }
+
+    function canPlace(grid, word, row, col, dr, dc) {
+      for (let i = 0; i < word.length; i++) {
+        const r = row + i * dr;
+        const c = col + i * dc;
+        if (r < 0 || r >= grid.length || c < 0 || c >= grid[0].length) return false;
+        if (grid[r][c] !== null && grid[r][c] !== word[i]) return false;
+      }
+      return true;
+    }
+
+    function placeWord(grid, word, row, col, dr, dc) {
+      for (let i = 0; i < word.length; i++) {
+        grid[row + i * dr][col + i * dc] = word[i];
+      }
+    }
+
+    function generatePuzzle() {
+      if (words.length === 0) { showError('Add at least one word first!'); return; }
+      const dirs = getEnabledDirections();
+      if (dirs.length === 0) { showError('Enable at least one direction!'); return; }
+
+      const rows = Math.max(5, Math.min(20, parseInt(document.getElementById('opt-rows').value) || 10));
+      const cols = Math.max(5, Math.min(20, parseInt(document.getElementById('opt-cols').value) || 10));
+
+      const grid = Array.from({ length: rows }, () => Array(cols).fill(null));
+      const failed = [];
+
+      const sorted = [...words].sort((a, b) => b.length - a.length);
+
+      for (const word of sorted) {
+        let placed = false;
+        for (let attempt = 0; attempt < 200 && !placed; attempt++) {
+          const dir = dirs[Math.floor(Math.random() * dirs.length)];
+          const row = Math.floor(Math.random() * rows);
+          const col = Math.floor(Math.random() * cols);
+          if (canPlace(grid, word, row, col, dir.dr, dir.dc)) {
+            placeWord(grid, word, row, col, dir.dr, dir.dc);
+            placed = true;
+          }
+        }
+        if (!placed) failed.push(word);
+      }
+
+      const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          if (grid[r][c] === null) grid[r][c] = alpha[Math.floor(Math.random() * 26)];
+        }
+      }
+
+      currentGrid = grid;
+      currentRows = rows;
+      currentCols = cols;
+
+      renderGrid(grid, rows, cols);
+      renderWordList(words.filter(w => !failed.includes(w)));
+      document.getElementById('export-btn').disabled = false;
+
+      if (failed.length > 0) {
+        showError('Could not place: ' + failed.join(', ') + '. Try a larger grid or fewer words.');
+      } else {
+        hideError();
+      }
+    }
+
+    function renderGrid(grid, rows, cols) {
+      let html = '<table class="puzzle-grid">';
+      for (let r = 0; r < rows; r++) {
+        html += '<tr>';
+        for (let c = 0; c < cols; c++) {
+          html += '<td>' + grid[r][c] + '</td>';
+        }
+        html += '</tr>';
+      }
+      html += '</table>';
+      document.getElementById('puzzle-container').innerHTML = html;
+    }
+
+    function renderWordList(placed) {
+      const container = document.getElementById('words-to-find');
+      if (!placed.length) { container.innerHTML = ''; return; }
+      container.innerHTML =
+        '<div class="words-header">Words to Find:</div>' +
+        '<div class="words-grid">' + placed.map(w => '<span class="word-tag">' + w + '</span>').join('') + '</div>';
+    }
+
+    function exportPDF() {
+      if (!currentGrid) return;
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+      const pageW   = 210;
+      const margin  = 15;
+      const maxW    = pageW - margin * 2;
+      const cellSize = Math.min(maxW / currentCols, 170 / currentRows, 10);
+      const gridW   = cellSize * currentCols;
+      const gridH   = cellSize * currentRows;
+      const startX  = (pageW - gridW) / 2;
+      const startY  = 25;
+
+      doc.setFontSize(18);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Word Search', pageW / 2, 18, { align: 'center' });
+
+      doc.setLineWidth(0.3);
+      doc.setFontSize(Math.min(cellSize * 0.58, 10));
+      doc.setFont('helvetica', 'bold');
+      for (let r = 0; r < currentRows; r++) {
+        for (let c = 0; c < currentCols; c++) {
+          const x = startX + c * cellSize;
+          const y = startY + r * cellSize;
+          doc.rect(x, y, cellSize, cellSize);
+          doc.text(currentGrid[r][c], x + cellSize / 2, y + cellSize * 0.68, { align: 'center' });
+        }
+      }
+
+      const listY = startY + gridH + 12;
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Words to Find:', margin, listY);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      const perRow   = 4;
+      const colWidth = maxW / perRow;
+      words.forEach(function(word, i) {
+        var col = i % perRow;
+        var row = Math.floor(i / perRow);
+        doc.text(word, margin + col * colWidth, listY + 8 + row * 7);
+      });
+
+      doc.save('word-search.pdf');
+    }
+
+    document.getElementById('word-input').addEventListener('keydown', function(e) {
       if (e.key === 'Enter') addWord();
     });
   </script>
