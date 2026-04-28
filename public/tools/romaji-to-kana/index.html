@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romaji to Hiragana & Katakana Free — Japan Converter | ZenithTools</title>
+    <meta name="description" content="Convert English Romaji to Japanese Hiragana and Katakana instantly — free, fast, and accurate. No login required. Supports all standard romaji combinations.">
+    <link rel="canonical" href="https://zenithtools.vercel.app/tools/romaji-to-kana/index.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenithtools.vercel.app/tools/romaji-to-kana/index.html">
+    <meta property="og:title" content="Free Romaji to Hiragana & Katakana Converter | ZenithTools">
+    <meta property="og:description" content="Instantly convert English Romaji to Japanese Hiragana and Katakana. Free, no login, works in your browser.">
+    <meta property="og:site_name" content="ZenithTools">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Romaji to Hiragana Converter | ZenithTools">
+    <meta name="twitter:description" content="Convert English Romaji to Japanese Hiragana and Katakana instantly. Free and no login required.">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Japan Converter — Romaji to Hiragana & Katakana",
+          "url": "https://zenithtools.vercel.app/tools/romaji-to-kana/index.html",
+          "description": "Convert English Romaji to Japanese Hiragana and Katakana instantly. Free browser-based tool.",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "creator": { "@type": "Organization", "name": "ZenithTools", "url": "https://zenithtools.vercel.app" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is Romaji?", "acceptedAnswer": { "@type": "Answer", "text": "Romaji is the romanization of the Japanese language — writing Japanese phonetics using English letters, e.g. 'konnichiwa'." } },
+            { "@type": "Question", "name": "How do I convert Romaji to Hiragana?", "acceptedAnswer": { "@type": "Answer", "text": "Simply type your Romaji text into the input box and the converter will instantly show the Hiragana and Katakana equivalents." } },
+            { "@type": "Question", "name": "Is this Romaji converter free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Japan Converter by ZenithTools is 100% free, requires no account, and runs entirely in your browser." } },
+            { "@type": "Question", "name": "What is the difference between Hiragana and Katakana?", "acceptedAnswer": { "@type": "Answer", "text": "Hiragana is used for native Japanese words and grammar. Katakana is used mainly for foreign loanwords and emphasis." } }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#39B5E0",
+                        "primary-light": "#60CFFF",
+                        secondary: "#FFD4B2",
+                        "bg-page": "#D8E3F0",
+                        "panel-inner": "#FBE4D8",
+                    },
+                    fontFamily: {
+                        display: ["Fredoka One", "cursive"],
+                        body: ["Nunito", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #D8E3F0;
+        }
+        .glossy-panel {
+            background: linear-gradient(180deg, #60CFFF 0%, #39B5E0 100%);
+            box-shadow: inset 0 6px 0 rgba(255,255,255,0.4), 0 8px 0 rgba(0,0,0,0.1);
+        }
+        .glossy-button {
+            background-color: #FFD4B2;
+            border: 4px solid #39B5E0;
+            border-radius: 9999px;
+            box-shadow: inset 0 4px 0 rgba(255,255,255,0.4), 0 6px 0 rgba(0,0,0,0.15);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            font-family: 'Fredoka One', cursive;
+            color: #39B5E0;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .glossy-button:active, .glossy-button:focus-within {
+            transform: translateY(4px);
+            box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 2px 0 rgba(0,0,0,0.1);
+        }
+        .glossy-button:hover {
+            filter: brightness(1.05);
+        }
+        .inner-peach {
+            background-color: #FBE4D8;
+            box-shadow: inset 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 2rem;
+        }
+        .kana-label {
+            background: linear-gradient(180deg, #60CFFF 0%, #39B5E0 100%);
+            box-shadow: inset 0 3px 0 rgba(255,255,255,0.4), 0 4px 0 rgba(0,0,0,0.1);
+            color: white;
+            font-family: 'Fredoka One', cursive;
+            letter-spacing: 0.12em;
+        }
+        .copy-btn {
+            background: linear-gradient(180deg, #60CFFF 0%, #39B5E0 100%);
+            box-shadow: inset 0 3px 0 rgba(255,255,255,0.3), 0 4px 0 rgba(0,0,0,0.12);
+            transition: transform 0.1s ease;
+            border-radius: 0.75rem;
+        }
+        .copy-btn:active {
+            transform: translateY(3px);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 0 rgba(0,0,0,0.1);
+        }
+        .nav-glossy {
+            background: linear-gradient(180deg, #60CFFF 0%, #39B5E0 100%);
+            box-shadow: inset 0 4px 0 rgba(255,255,255,0.35), 0 6px 0 rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center">
+
+    <!-- Nav -->
+    <nav class="w-full nav-glossy flex items-center justify-center z-20" style="min-height:5rem;">
+        <div class="w-full max-w-7xl px-6 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white/30 border-2 border-white/60 flex items-center justify-center text-xl shadow-inner">⛩️</div>
+                <span class="font-display text-white text-2xl tracking-wide" style="text-shadow:0 2px 0 rgba(0,0,0,0.15);">ZenithTools</span>
+            </a>
+            <div class="flex gap-6">
+                <a href="../shared/about.html" class="font-body font-bold text-white/90 hover:text-white transition-colors text-sm uppercase tracking-widest">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ad banner -->
+    <div class="w-full max-w-lg mt-8 px-4 bg-secondary/40 border-4 border-dashed border-primary/40 rounded-3xl py-3 text-center text-primary/50 font-bold text-xs uppercase tracking-widest">
+        ADVERTISING - SOFT BANNER
+    </div>
+
+    <main class="w-full max-w-2xl px-6 py-12 flex-grow flex flex-col items-center gap-10">
+
+        <!-- Page header -->
+        <header class="text-center">
+            <h1 class="font-display text-5xl md:text-6xl text-primary tracking-wide mb-3" style="text-shadow:0 4px 0 rgba(57,181,224,0.2);">
+                JAPAN CONVERTER
+            </h1>
+            <p class="font-body font-bold text-primary/60 text-lg uppercase tracking-widest">
+                Romaji → Hiragana & Katakana
+            </p>
+        </header>
+
+        <!-- Main glossy panel -->
+        <section class="w-full glossy-panel rounded-[3rem] border-b-8 border-primary/30 relative p-5">
+
+            <!-- Panel title badge -->
+            <div class="absolute -top-6 left-1/2 -translate-x-1/2 glossy-panel px-10 py-2 rounded-full border-4 border-white shadow-lg whitespace-nowrap">
+                <span class="font-display text-white text-xl tracking-wider">CONVERTER</span>
+            </div>
+
+            <div class="inner-peach mt-6 p-6 flex flex-col gap-6">
+
+                <!-- Input -->
+                <div>
+                    <label class="block font-display text-primary text-sm uppercase tracking-widest mb-2 ml-1">Type Romaji</label>
+                    <input
+                        type="text"
+                        id="romajiInput"
+                        class="w-full text-3xl font-black p-5 rounded-[1.5rem] border-4 border-primary focus:outline-none focus:ring-4 focus:ring-primary/30 transition-all text-primary placeholder-primary/30"
+                        style="background:rgba(255,255,255,0.6); box-shadow:inset 0 4px 8px rgba(0,0,0,0.08);"
+                        placeholder="e.g. konnichiwa"
+                        autocomplete="off"
+                    />
+                </div>
+
+                <!-- Output cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                    <!-- Hiragana -->
+                    <div class="relative" style="background:rgba(255,255,255,0.55); border-radius:1.5rem; border:4px solid #39B5E0; box-shadow:inset 0 3px 6px rgba(0,0,0,0.07); padding:1.5rem;">
+                        <div class="absolute -top-4 left-5 kana-label px-4 py-1 rounded-full text-xs uppercase tracking-widest border-2 border-white">Hiragana</div>
+                        <div id="hiraganaOutput" class="font-black text-4xl text-primary min-h-[52px] flex items-center mt-2">...</div>
+                        <button onclick="copyToClipboard('hiraganaOutput')" class="copy-btn absolute top-3 right-3 w-9 h-9 flex items-center justify-center" title="Copy">
+                            <span class="material-icons-round text-white text-base">content_copy</span>
+                        </button>
+                    </div>
+
+                    <!-- Katakana -->
+                    <div class="relative" style="background:rgba(255,255,255,0.55); border-radius:1.5rem; border:4px solid #39B5E0; box-shadow:inset 0 3px 6px rgba(0,0,0,0.07); padding:1.5rem;">
+                        <div class="absolute -top-4 left-5 kana-label px-4 py-1 rounded-full text-xs uppercase tracking-widest border-2 border-white">Katakana</div>
+                        <div id="katakanaOutput" class="font-black text-4xl text-primary min-h-[52px] flex items-center mt-2">...</div>
+                        <button onclick="copyToClipboard('katakanaOutput')" class="copy-btn absolute top-3 right-3 w-9 h-9 flex items-center justify-center" title="Copy">
+                            <span class="material-icons-round text-white text-base">content_copy</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Common phrases -->
+        <section class="w-full">
+            <h2 class="font-display text-primary text-xl uppercase tracking-widest text-center mb-6">Common Phrases</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button onclick="setInput('arigatou')" class="glossy-button py-4 text-lg hover:brightness-105">arigatou</button>
+                <button onclick="setInput('ohayou')" class="glossy-button py-4 text-lg hover:brightness-105">ohayou</button>
+                <button onclick="setInput('sayounara')" class="glossy-button py-4 text-lg hover:brightness-105">sayounara</button>
+                <button onclick="setInput('kawaii')" class="glossy-button py-4 text-lg hover:brightness-105">kawaii</button>
+            </div>
+        </section>
+
+        <!-- Ad slot -->
+        <div class="w-full h-28 bg-secondary/30 border-4 border-dashed border-primary/30 rounded-3xl flex items-center justify-center text-primary/40 font-bold text-xs uppercase tracking-[0.4em]">
+            ADVERTISING - SOFT SLOT
+        </div>
+
+    </main>
+
+    <footer class="w-full py-16 text-center font-body font-bold text-primary/40 text-xs uppercase tracking-widest">
+        <div class="flex justify-center gap-10 mb-4">
+            <a href="/" class="hover:text-primary transition-colors">Home</a>
+            <a href="../shared/terms.html" class="hover:text-primary transition-colors">Terms</a>
+            <a href="../shared/privacy.html" class="hover:text-primary transition-colors">Privacy</a>
+            <a href="../shared/cookie.html" class="hover:text-primary transition-colors">Cookies</a>
+        </div>
+        <p>&copy; 2026 Japan Converter • ZenithTools</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="../shared/consent.js"></script>
+    <script>
+        function setInput(val) {
+            const input = document.getElementById('romajiInput');
+            input.value = val;
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+
+        function copyToClipboard(id) {
+            const text = document.getElementById(id).innerText;
+            if (text && text !== '...') {
+                navigator.clipboard.writeText(text);
+            }
+        }
+    </script>
+</body>
+</html>

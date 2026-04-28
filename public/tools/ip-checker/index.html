@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Checker Free — What Is My IP? | ZenithTools</title>
+    <meta name="description" content="Find your public IP address, ISP, and location instantly with Network Inspector. Free online IP checker — no login, real-time results, works in your browser.">
+    <link rel="canonical" href="https://zenithtools.vercel.app/tools/ip-checker/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenithtools.vercel.app/tools/ip-checker/index.html">
+    <meta property="og:title" content="What Is My IP Address? Free IP Checker | ZenithTools">
+    <meta property="og:description" content="Check your public IP address, ISP, and location instantly. Free online IP lookup tool.">
+    <meta property="og:site_name" content="ZenithTools">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is My IP? Free IP Checker | ZenithTools">
+    <meta name="twitter:description" content="Find your public IP address and location instantly. Free online IP checker, no login required.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Network Inspector — IP Address & Location Checker",
+          "url": "https://zenithtools.vercel.app/tools/ip-checker/index.html",
+          "description": "Check your public IP address, ISP, and location instantly. Free browser-based network tool.",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "creator": { "@type": "Organization", "name": "ZenithTools", "url": "https://zenithtools.vercel.app" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is my IP address?", "acceptedAnswer": { "@type": "Answer", "text": "Your public IP address is the unique identifier assigned to your internet connection by your ISP. Visit Network Inspector to see your current IP address instantly." } },
+            { "@type": "Question", "name": "Can I check my location from my IP address?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Network Inspector shows an approximate location (city/country) based on your IP address using geolocation databases." } },
+            { "@type": "Question", "name": "What is an ISP?", "acceptedAnswer": { "@type": "Answer", "text": "ISP stands for Internet Service Provider — the company that provides your internet connection (e.g. AT&T, Comcast, Verizon, NTT)." } },
+            { "@type": "Question", "name": "Is the IP checker free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Network Inspector is completely free. No account or login is required." } }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-dark": "#120B2E",
+                        "jelly-pink": "#FF4DB2",
+                        "jelly-blue": "#3E94FF",
+                        "jelly-yellow": "#FFD23F",
+                        "jelly-green": "#72D639",
+                        "jelly-red": "#FF5757",
+                        "jelly-panel": "#2D62D1",
+                        "jelly-slider": "#FF8A3D",
+                        "jelly-trough": "#1E418C",
+                    },
+                    fontFamily: {
+                        display: ["Fredoka", "sans-serif"],
+                    },
+                    boxShadow: {
+                        "neon-blue":   "0 4px 0 0 #1E418C, inset 0 4px 4px rgba(255,255,255,0.3)",
+                        "neon-pink":   "0 4px 0 0 #A31E69, inset 0 4px 4px rgba(255,255,255,0.3)",
+                        "neon-yellow": "0 4px 0 0 #C49B1A, inset 0 4px 4px rgba(255,255,255,0.3)",
+                        "neon-green":  "0 4px 0 0 #4A9124, inset 0 4px 4px rgba(255,255,255,0.3)",
+                        "neon-red":    "0 4px 0 0 #B02E2E, inset 0 4px 4px rgba(255,255,255,0.3)",
+                        "panel-inner": "inset 0 0 15px rgba(0,0,0,0.4)",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #120B2E;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .jelly-gradient-blue  { background: linear-gradient(180deg, #5CABFF 0%, #3E94FF 100%); }
+        .jelly-gradient-pink  { background: linear-gradient(180deg, #FF7BD0 0%, #FF4DB2 100%); }
+        .jelly-gradient-yellow{ background: linear-gradient(180deg, #FFE071 0%, #FFD23F 100%); }
+        .jelly-gradient-green { background: linear-gradient(180deg, #9BEA5C 0%, #72D639 100%); }
+
+        .jelly-button {
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+        .jelly-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 0 currentColor !important;
+        }
+
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 10%;
+            width: 80%;
+            height: 28%;
+            background: rgba(255,255,255,0.35);
+            border-radius: 999px;
+            pointer-events: none;
+        }
+
+        .jelly-border { border: 6px solid #5CABFF; }
+
+        .jelly-panel-box {
+            background: #2D62D1;
+            border: 6px solid #5CABFF;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+            border-radius: 24px;
+        }
+        .jelly-inner {
+            background: rgba(30, 65, 140, 0.5);
+            border-radius: 18px;
+            box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* IP address trough display */
+        .ip-trough {
+            background: #1E418C;
+            border-radius: 9999px;
+            box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+            padding: 5px 6px;
+            display: flex;
+            align-items: center;
+        }
+        .ip-fill {
+            background: linear-gradient(180deg, #FFA05C 0%, #FF8A3D 100%);
+            border-radius: 9999px;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1.25rem;
+            min-height: 2rem;
+            white-space: nowrap;
+        }
+        .ip-fill::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 8%;
+            width: 84%;
+            height: 35%;
+            background: rgba(255,255,255,0.3);
+            border-radius: 999px;
+            pointer-events: none;
+        }
+
+        .data-row {
+            background: rgba(30, 65, 140, 0.4);
+            border: 2px solid rgba(94, 171, 255, 0.2);
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+        }
+
+        /* Floating decorative blobs */
+        .blob { position: absolute; border-radius: 50%; pointer-events: none; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center relative overflow-x-hidden">
+
+    <!-- Background radial glow -->
+    <div class="fixed inset-0 -z-10 pointer-events-none">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 20% 20%, rgba(62,148,255,0.12) 0%, transparent 55%)"></div>
+        <div style="position:absolute;bottom:0;right:0;width:100%;height:100%;background:radial-gradient(circle at 80% 80%, rgba(255,77,178,0.08) 0%, transparent 55%)"></div>
+    </div>
+
+    <!-- Decorative floating elements -->
+    <div class="blob" style="top:8%;left:4%;width:60px;height:60px;background:rgba(255,77,178,0.12);filter:blur(6px);"></div>
+    <div class="blob" style="top:15%;right:6%;width:80px;height:80px;background:rgba(62,148,255,0.15);filter:blur(8px);"></div>
+    <div class="blob" style="top:55%;left:2%;width:100px;height:100px;background:rgba(255,210,63,0.08);filter:blur(12px);"></div>
+    <span class="material-icons fixed" style="top:7%;left:5%;color:rgba(255,77,178,0.25);font-size:2rem;transform:rotate(15deg);pointer-events:none;">favorite</span>
+    <span class="material-icons fixed" style="bottom:22%;right:4%;color:rgba(255,210,63,0.25);font-size:2rem;transform:rotate(-12deg);pointer-events:none;">star</span>
+    <span class="material-icons fixed" style="top:40%;right:3%;color:rgba(114,214,57,0.2);font-size:1.5rem;pointer-events:none;">bolt</span>
+
+    <!-- Nav -->
+    <nav class="w-full border-b border-white/10 flex items-center justify-center relative z-20" style="background:rgba(18,11,46,0.8);backdrop-filter:blur(12px);min-height:4.5rem;">
+        <div class="w-full max-w-7xl px-6 flex items-center justify-between">
+            <a href="/" class="font-display text-2xl font-bold text-white flex items-center gap-2" style="text-shadow:0 2px 8px rgba(62,148,255,0.5);">
+                <span class="w-9 h-9 jelly-gradient-blue rounded-xl flex items-center justify-center shine-effect text-base shadow-neon-blue">🌐</span>
+                Zenith<span class="text-jelly-blue">Tools</span>
+            </a>
+            <div class="flex gap-6">
+                <a href="../shared/about.html" class="font-display font-semibold text-white/60 hover:text-jelly-blue transition-colors text-base">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ad banner -->
+    <div class="w-full max-w-2xl mt-8 mx-auto px-6">
+        <div class="border-2 border-dashed rounded-2xl py-4 text-center font-display font-semibold text-sm tracking-widest uppercase"
+             style="background:rgba(62,148,255,0.06);border-color:rgba(62,148,255,0.2);color:rgba(62,148,255,0.3);">
+            ADVERTISING - TOP BANNER
+        </div>
+    </div>
+
+    <main class="w-full max-w-2xl px-6 py-12 flex-grow flex flex-col items-center gap-10">
+
+        <!-- Header -->
+        <header class="text-center">
+            <h1 class="font-display font-bold text-5xl md:text-6xl tracking-wide mb-3" style="text-shadow:0 4px 12px rgba(0,0,0,0.5);">
+                <span class="text-jelly-blue">NETWORK</span>
+                <span class="text-white"> INSPECTOR</span>
+            </h1>
+            <p class="font-display font-semibold text-white/40 text-lg uppercase tracking-widest">
+                Your connection at a glance
+            </p>
+        </header>
+
+        <!-- Main jelly panel -->
+        <section class="jelly-panel-box w-full p-2 relative">
+
+            <div class="jelly-inner p-6 space-y-6">
+
+                <!-- IP Address row -->
+                <div>
+                    <div class="flex justify-between items-center px-1 mb-3">
+                        <span class="font-display font-bold text-xl text-white uppercase tracking-wide">IP Address</span>
+                        <span class="material-icons text-white">language</span>
+                    </div>
+                    <!-- Trough-style display -->
+                    <div class="ip-trough" style="min-height:3rem;">
+                        <div class="ip-fill" style="font-size:1.25rem;">
+                            <span id="ipv4Display" class="font-display font-bold text-white tracking-widest" style="text-shadow:0 2px 4px rgba(0,0,0,0.3);">Detecting...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ISP row -->
+                <div>
+                    <div class="flex justify-between items-center px-1 mb-3">
+                        <span class="font-display font-bold text-xl text-white uppercase tracking-wide">ISP</span>
+                        <span class="material-icons text-white">router</span>
+                    </div>
+                    <div class="ip-trough" style="min-height:2.75rem;">
+                        <div class="ip-fill">
+                            <span id="ispDisplay" class="font-display font-semibold text-white text-base" style="text-shadow:0 1px 3px rgba(0,0,0,0.3);">Scanning...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location row -->
+                <div>
+                    <div class="flex justify-between items-center px-1 mb-3">
+                        <span class="font-display font-bold text-xl text-white uppercase tracking-wide">Location</span>
+                        <span class="material-icons text-white">place</span>
+                    </div>
+                    <div class="ip-trough" style="min-height:2.75rem;">
+                        <div class="ip-fill">
+                            <span id="locDisplay" class="font-display font-semibold text-white text-base" style="text-shadow:0 1px 3px rgba(0,0,0,0.3);">...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Agent row -->
+                <div class="data-row">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-display font-bold text-base text-white uppercase tracking-wide">Browser</span>
+                        <span class="material-icons text-white/60 text-sm">web</span>
+                    </div>
+                    <div id="uaDisplay" class="font-display text-sm text-white/50 leading-relaxed truncate">...</div>
+                </div>
+
+                <!-- Square action buttons -->
+                <div class="flex justify-center gap-6 pt-2">
+                    <button id="copyBtn" class="jelly-button w-16 h-16 jelly-gradient-green rounded-2xl flex items-center justify-center shadow-neon-green shine-effect text-white">
+                        <span class="material-icons text-3xl">content_copy</span>
+                    </button>
+                    <button id="refreshBtn" class="jelly-button w-16 h-16 jelly-gradient-blue rounded-2xl flex items-center justify-center shadow-neon-blue shine-effect text-white">
+                        <span class="material-icons text-3xl">refresh</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pill buttons -->
+        <div class="w-full space-y-4">
+            <button id="rescanBtn" class="jelly-button w-full py-4 jelly-gradient-pink rounded-full font-display font-bold text-white text-2xl uppercase tracking-widest shadow-neon-pink shine-effect">
+                Rescan Network
+            </button>
+            <button id="copyIpBtn" class="jelly-button w-full py-4 jelly-gradient-yellow rounded-full font-display font-bold text-white text-2xl uppercase tracking-widest shadow-neon-yellow shine-effect">
+                Copy IP
+            </button>
+        </div>
+
+        <!-- Ad slot -->
+        <div class="w-full h-28 rounded-3xl flex items-center justify-center font-display font-semibold text-xs uppercase tracking-[0.5em]"
+             style="background:rgba(255,255,255,0.03);border:2px dashed rgba(255,255,255,0.08);color:rgba(255,255,255,0.1);">
+            ADVERTISING - MID SLOT
+        </div>
+
+    </main>
+
+    <footer class="w-full py-12 text-center border-t border-white/5">
+        <div class="flex justify-center gap-10 mb-4 font-display font-semibold text-sm uppercase tracking-widest text-white/25">
+            <a href="/" class="hover:text-jelly-blue transition-colors">Home</a>
+            <a href="../shared/terms.html" class="hover:text-jelly-blue transition-colors">Terms</a>
+            <a href="../shared/privacy.html" class="hover:text-jelly-blue transition-colors">Privacy</a>
+            <a href="../shared/cookie.html" class="hover:text-jelly-blue transition-colors">Cookies</a>
+        </div>
+        <p class="font-display text-white/15 text-sm tracking-widest">&copy; 2026 Network Inspector • ZenithTools</p>
+        <div class="w-32 h-1 bg-white/10 rounded-full mx-auto mt-6"></div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="../shared/consent.js"></script>
+    <script>
+        document.getElementById('uaDisplay').textContent = navigator.userAgent;
+
+        function copyIP() {
+            const ip = document.getElementById('ipv4Display').textContent.trim();
+            if (ip && ip !== 'Detecting...') {
+                navigator.clipboard.writeText(ip);
+            }
+        }
+        document.getElementById('copyBtn').addEventListener('click', copyIP);
+        document.getElementById('copyIpBtn').addEventListener('click', copyIP);
+
+        if (document.getElementById('rescanBtn') && window.fetchIP) {
+            document.getElementById('rescanBtn').addEventListener('click', window.fetchIP);
+        }
+    </script>
+</body>
+</html>

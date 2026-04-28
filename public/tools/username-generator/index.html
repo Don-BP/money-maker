@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Generator Free — Identity Forge | ZenithTools</title>
+    <meta name="description" content="Generate cool, unique usernames and strong passwords instantly with Identity Forge. Free online username generator — gaming, fantasy, minimal styles. No login required.">
+    <link rel="canonical" href="https://zenithtools.vercel.app/tools/username-generator/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zenithtools.vercel.app/tools/username-generator/index.html">
+    <meta property="og:title" content="Free Username Generator & Password Creator | ZenithTools">
+    <meta property="og:description" content="Generate cool usernames and strong passwords instantly. Gaming, fantasy, and minimal styles. Free, no login.">
+    <meta property="og:site_name" content="ZenithTools">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Username Generator Online | ZenithTools">
+    <meta name="twitter:description" content="Generate cool, unique usernames and strong passwords instantly. Free, no login, instant results.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Identity Forge — Username & Password Generator",
+          "url": "https://zenithtools.vercel.app/tools/username-generator/index.html",
+          "description": "Generate themed usernames and secure passwords instantly. Free browser-based tool.",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "creator": { "@type": "Organization", "name": "ZenithTools", "url": "https://zenithtools.vercel.app" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "How do I generate a username?", "acceptedAnswer": { "@type": "Answer", "text": "Enter a theme word (e.g. 'Ninja', 'Dragon') and click 'Forge!'. Identity Forge will create multiple unique username and password combinations instantly." } },
+            { "@type": "Question", "name": "Are the generated passwords secure?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, generated passwords use a mix of letters, numbers, and symbols for strong security. Always use a password manager to store them." } },
+            { "@type": "Question", "name": "Can I use this to create a gaming username?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Select the 'Gaming / Edgy' style in Generator Options and enter your theme word for gamer-style usernames." } },
+            { "@type": "Question", "name": "Is Identity Forge free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Identity Forge is completely free. No account or login required. Generates instantly in your browser." } }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF9800", // Vibrant Orange
+                        secondary: "#4CAF50", // Vibrant Green
+                        "panel-cream": "#FFF9E6",
+                        "panel-dark": "#2D3748",
+                        "background-light": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        fredoka: ["Fredoka", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "2rem",
+                        "xl": "3rem",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #E5E7EB;
+        }
+        .chunky-shadow-orange { box-shadow: 0 8px 0 0 #E65100; }
+        .chunky-shadow-green { box-shadow: 0 8px 0 0 #2E7D32; }
+        .chunky-shadow-panel { box-shadow: 0 12px 0 0 rgba(0,0,0,0.1); }
+        
+        .generator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .toast {
+            position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+            background: #4CAF50; color: white; padding: 1rem 2.5rem;
+            border-radius: 2rem; font-weight: 700; z-index: 100;
+            box-shadow: 0 8px 0 #2E7D32;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .toast.hidden { opacity: 0; transform: translate(-50%, 20px); pointer-events: none; }
+        .loading-spinner { text-align: center; padding: 2rem; color: #FF9800; font-weight: 900; font-size: 1.5rem; display: none; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-0">
+    <!-- Global Nav (Themed) -->
+    <nav class="w-full h-16 bg-panel-cream border-b-8 border-gray-300 flex items-center justify-center relative z-20 chunky-shadow-panel">
+        <div class="w-full max-w-7xl px-6 flex items-center justify-between">
+            <a href="/" class="font-fredoka text-3xl font-black tracking-tight text-gray-800">
+                Zenith<span class="text-primary">Tools</span>
+            </a>
+            <div class="flex gap-6">
+                <a href="../shared/about.html" class="text-sm font-black text-gray-500 hover:text-primary transition-colors uppercase tracking-widest">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="w-full max-w-lg mt-8 mb-4 px-4 bg-yellow-100 border-4 border-dashed border-yellow-400 rounded-2xl py-4 text-center text-yellow-800 font-bold text-sm tracking-widest uppercase">
+        ADVERTISING - TOP BANNER
+    </div>
+
+    <main class="w-full max-w-5xl px-6 py-12 flex-grow">
+        <header class="text-center mb-12 relative">
+            <div class="inline-block bg-primary text-white text-3xl md:text-5xl font-black py-4 px-10 rounded-2xl chunky-shadow-orange transform rotate-[-1deg] border-4 border-white uppercase tracking-wider mb-6">
+                Identity Forge
+            </div>
+            <p class="text-xl text-gray-500 font-bold uppercase tracking-widest">Enter a theme • Get cool names + Secure passwords</p>
+        </header>
+
+        <section class="bg-panel-cream border-8 border-white rounded-[3rem] p-8 md:p-12 chunky-shadow-panel mb-12">
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="text" id="seedInput" class="flex-1 text-2xl font-bold p-6 bg-white border-4 border-gray-200 rounded-3xl focus:outline-none focus:border-primary transition-colors" placeholder="e.g. 'Ninja', 'Cyber'...">
+                <button id="generateBtn" class="bg-secondary text-white text-2xl font-black py-5 px-10 rounded-3xl chunky-shadow-green border-4 border-white hover:translate-y-1 hover:shadow-none transition-all active:translate-y-2 uppercase tracking-wide">
+                    Forge!
+                </button>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button id="toggleOptions" class="text-gray-400 font-black uppercase tracking-[0.2em] hover:text-primary transition-colors">Generator Options ▾</button>
+            </div>
+            
+            <div id="optionsPanel" class="hidden mt-8 space-y-6 bg-white/50 p-8 rounded-3xl border-4 border-dashed border-gray-300">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-gray-400 text-xs font-black uppercase tracking-widest mb-3">Vibe Style</label>
+                        <select id="styleSelect" class="w-full p-4 bg-white border-4 border-gray-200 rounded-2xl font-bold text-gray-700">
+                            <option value="gaming">Gaming / Edgy</option>
+                            <option value="minimal">Minimal / Clean</option>
+                            <option value="fantasy">Fantasy / RPG</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 text-xs font-black uppercase tracking-widest mb-3">Use Numbers?</label>
+                        <select id="numberSelect" class="w-full p-4 bg-white border-4 border-gray-200 rounded-2xl font-bold text-gray-700">
+                            <option value="yes">Yes (e.g. Hero99)</option>
+                            <option value="no">No (e.g. Hero)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full h-32 mb-12 bg-gray-200 border-4 border-dashed border-gray-300 rounded-3xl flex items-center justify-center text-gray-400 font-black text-xs uppercase tracking-[0.5em]">
+            ADVERTISING - MID SLOT
+        </div>
+
+        <section class="result-section">
+            <div id="loader" class="loading-spinner">FORGING NEW IDENTITIES...</div>
+            <div id="resultsGrid" class="generator-grid">
+                <!-- Result cards will follow this themed structure: -->
+                <!-- 
+                <div class="bg-white border-4 border-gray-200 rounded-3xl p-6 chunky-shadow-panel hover:-translate-y-1 transition-transform">
+                    <div class="text-primary text-3xl font-black mb-4">SpaceNinja</div>
+                    <div class="bg-gray-100 p-4 rounded-xl flex justify-between items-center">
+                        <span class="font-mono font-bold text-gray-500">P@ssw0rd123</span>
+                        <button class="text-primary font-black uppercase text-xs">Copy</button>
+                    </div>
+                </div> 
+                -->
+            </div>
+        </section>
+
+        <div id="copyNotice" class="toast hidden">COPIED TO CLIPBOARD! ✓</div>
+    </main>
+
+    <footer class="w-full bg-gray-800 text-gray-400 py-12 px-6 mt-20 text-center">
+        <nav class="flex justify-center gap-8 mb-6">
+            <a href="/" class="hover:text-white font-bold transition-colors">HOME</a>
+            <a href="../shared/about.html" class="hover:text-white font-bold transition-colors">ABOUT</a>
+            <a href="../shared/terms.html" class="hover:text-white font-bold transition-colors">TERMS</a>
+            <a href="../shared/privacy.html" class="hover:text-white font-bold transition-colors">PRIVACY</a>
+            <a href="../shared/cookie.html" class="hover:text-white font-bold transition-colors">COOKIES</a>
+        </nav>
+        <div class="text-xs font-black uppercase tracking-[0.3em]">&copy; 2026 Identity Forge • ZenithTools</div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="../shared/consent.js"></script>
+</body>
+</html>
