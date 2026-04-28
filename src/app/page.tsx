@@ -67,6 +67,10 @@ const tools = [
 export default function Home() {
   return (
     <>
+      <style>{`
+        .tool-card { transition: transform 0.15s, box-shadow 0.15s; }
+        .tool-card:hover { transform: translateY(-3px); box-shadow: 0 8px 0 0 #C4B5FD !important; }
+      `}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -164,20 +168,11 @@ export default function Home() {
               <a
                 key={tool.id}
                 href={tool.path}
-                className="flex flex-col rounded-3xl overflow-hidden no-underline group"
+                className="tool-card flex flex-col rounded-3xl overflow-hidden no-underline"
                 style={{
                   background: "#fff",
                   border: "1.5px solid #DDD6FE",
                   boxShadow: "0 4px 0 0 #DDD6FE",
-                  transition: "transform 0.15s, box-shadow 0.15s",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-3px)";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 0 0 #C4B5FD";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 4px 0 0 #DDD6FE";
                 }}
               >
                 {/* Card top — purple gradient with icon */}
