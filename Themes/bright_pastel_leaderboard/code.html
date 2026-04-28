@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bright Pastel Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Quicksand:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#7C92FF",
+                        "background-light": "#E0F2FF",
+                        "background-dark": "#1A2B42",
+                        "accent-yellow": "#FFD233",
+                        "accent-pink": "#FF7ED4",
+                        "accent-green": "#7ED957",
+                        "panel-bg": "#F9F6E5",
+                        "panel-border": "#96A7FF",
+                    },
+                    fontFamily: {
+                        display: ["Fredoka One", "cursive"],
+                        body: ["Quicksand", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                        "xl": "2.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .bubble-shadow {
+            box-shadow: inset 0 -6px 0 rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1.5px #4A5AB3;
+        }
+        .progress-striped {
+            background-size: 20px 20px;
+            background-image: linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+        }
+        .panel-container {
+            border: 6px solid #96A7FF;
+            background: #F9F6E5;
+        }
+        .dark .panel-container {
+            border-color: #4A5AB3;
+            background: #2D3E55;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[400px] aspect-[9/19.5] bg-[#BEE3FF] dark:bg-[#1E3A5F] rounded-[3rem] p-4 relative overflow-hidden border-[8px] border-white/20 shadow-2xl flex flex-col">
+<div class="flex justify-between items-center px-4 mb-4">
+<span class="text-primary font-bold">9:41</span>
+<div class="flex gap-2 text-primary">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm">battery_full</span>
+</div>
+</div>
+<div class="flex justify-between items-center gap-2 mb-6">
+<div class="flex-1 bg-white/40 dark:bg-black/20 rounded-full h-8 flex items-center pr-2 relative">
+<div class="w-10 h-10 -ml-1 flex items-center justify-center">
+<img alt="Coin" class="w-8 h-8 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPmuoBUVxC5IR1652cmZTUX3H7o6XWwqFXxu41A9ovcEWmJTeHL-UHsPb0UZN-Dj2on6IidjmzHH-bbePf5ls500xLuNEnFootrWrKPGyhTuf24Gr-etMOmHKyNenTDjBk7Icg21CE9UIBXP49h_okhXmoWt_NLLzL_dtZcIB3QbluefL__bjbdvy8J3-7ehbOU0yyWwK5-3o5kRbzqVJTSOF8CuXZwr6CddNAIwiRf4i2MkGMCsOzPlNtnEUs_pABgEdiz6-vZT0"/>
+</div>
+<span class="ml-1 text-sm font-display text-blue-800 dark:text-blue-100">12,450</span>
+<button class="ml-auto w-6 h-6 bg-accent-green text-white rounded-full flex items-center justify-center bubble-shadow">+</button>
+</div>
+<div class="flex-1 bg-white/40 dark:bg-black/20 rounded-full h-8 flex items-center pr-2 relative">
+<div class="w-10 h-10 -ml-1 flex items-center justify-center">
+<img alt="Gem" class="w-8 h-8 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKzMRzO5HHiQ0TqAePkJ6lqjjYSLv7ZNuHqyCu-Tf49Qr1YQ4p32k8JiHeO69pNsYjb_4bG350KafyJEIP7lMfpj_PmE74hOAHFqP7mMKGUhagtW1FFXHxX97JhxvOsjlm6YUAzKbmiywMkqqeG7CgDe4qbCTwc_5lW8wFc3WgnGjrhP368GKYmVPsC-e-fGikGw3HFjFp83uY9Qka2uTYkjMV0KneBv3Vux4oRuz_aT-r3M1VDEah_agznKes2unCCLbLxN3LLhk"/>
+</div>
+<span class="ml-1 text-sm font-display text-blue-800 dark:text-blue-100">842</span>
+<button class="ml-auto w-6 h-6 bg-accent-green text-white rounded-full flex items-center justify-center bubble-shadow">+</button>
+</div>
+<div class="flex-1 bg-white/40 dark:bg-black/20 rounded-full h-8 flex items-center pr-2 relative">
+<div class="w-10 h-10 -ml-1 flex items-center justify-center">
+<img alt="Energy" class="w-8 h-8 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRxaTYnFqLXAw9sYz1XMHSv33jSyCxdiOqBhxmk1JoBRcLLBXnUJXnXwUvRGu_myy2R16WUqXQWUL9L2TByLUflq3eGuBrcdGO_95-YLfwLSMNxYglbWAEl5CTTyD7gw1uQZZTV5ZGY91NXIPhoi2AkWn0ONH8-HLqPARMN1dXQU-AkFgVzg6YO5Pzq2YonghTYEORcL0rcNp3cP3Y97hFEkem-PYOzvUlF7MS43wtWsAGdSp8wVhio-GXSDQPYIUG7nAJ-lHEcj0"/>
+</div>
+<span class="ml-1 text-sm font-display text-blue-800 dark:text-blue-100">14/20</span>
+<button class="ml-auto w-6 h-6 bg-accent-green text-white rounded-full flex items-center justify-center bubble-shadow">+</button>
+</div>
+</div>
+<div class="flex-1 panel-container rounded-xl flex flex-col relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 w-48 h-12 bg-accent-yellow rounded-full border-4 border-white flex items-center justify-center bubble-shadow z-10">
+<span class="font-display text-2xl text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">RANKING</span>
+</div>
+<button class="absolute -top-3 -right-3 w-10 h-10 bg-accent-pink border-4 border-white rounded-full flex items-center justify-center text-white bubble-shadow z-10">
+<span class="material-icons">close</span>
+</button>
+<div class="mt-8 px-4 flex gap-2">
+<button class="flex-1 py-2 bg-primary text-white rounded-t-xl font-display text-sm tracking-wider bubble-shadow">FRIENDS</button>
+<button class="flex-1 py-2 bg-white/50 dark:bg-black/30 text-blue-600 dark:text-blue-300 rounded-t-xl font-display text-sm tracking-wider">WORLD</button>
+</div>
+<div class="flex-1 overflow-y-auto px-3 py-4 space-y-4">
+<div class="bg-white/60 dark:bg-black/20 rounded-2xl p-3 flex items-center gap-3 border-b-4 border-black/5">
+<div class="w-8 flex justify-center">
+<img alt="Rank 1" class="w-8 h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5Nzk-dPOd2FcJBYzc1VKpgXAbf65E3aU8UNs7EfFHkTi1FVyGTavLj84aGevYPXcJeoAkmgHyR2rTMxCG4m55gWSOfus00E6Zc2uyu5Sk_aLL-E2yEDJ4oSz_sjcqPUT3M4dZV5WipnvzJZmu8YzbrVTp_ABAWQUF5bIsWJi9OBhgtcqjWDvjiAvVQp8nk8nSL4J-3WZOgCaX8qp6ZlxMGjYDlpNsnD7Xg7_AsZnM1yodxBrPMvU_mN8OFzwtEVHisZE0jAKllk"/>
+</div>
+<div class="w-10 h-10 bg-accent-yellow rounded-full border-2 border-white overflow-hidden">
+<img alt="Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsODjKf9VXEoiWWeReLpyUWFrJGApSjiOdaAkoMuFzbG6968ouJyUokLyl0dyu4_EzkSCHtiv8lvv_ZvMxYykgn_SX1-9I9q0VJiaouIq8Ul0BrSsD-fDCPyVtMUkCKamFiHbxPz45ot3IazuwuHWGgeP-ONXQVMajjKXt9t9ptS7gpTp7GwJDG3IRIaNWMjMEqA-w2RqI-nokvqkfu90VLbGVGXQbs6V-HIkVRvK4YHp1JbwqNm5f9ePFKDKQczphfw0KqfZkFH8"/>
+</div>
+<div class="flex-1">
+<p class="font-display text-blue-900 dark:text-white text-sm">ALEX PLAYER</p>
+<div class="w-full h-3 bg-white/50 dark:bg-gray-700 rounded-full mt-1 overflow-hidden">
+<div class="h-full w-[85%] bg-accent-green progress-striped"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-display text-accent-yellow text-sm">24,500</p>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-black/20 rounded-2xl p-3 flex items-center gap-3 border-b-4 border-black/5">
+<div class="w-8 font-display text-primary text-center text-lg">2</div>
+<div class="w-10 h-10 bg-primary rounded-full border-2 border-white overflow-hidden">
+<img alt="Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKpcSel4AS8LUjyE4RzSlTdHFSq7iWMfkyhBeCR8cuus-mGLfkzo0abTKL0efbUZ7WR8NRJNqDsbNYeu6qQNMjWp2myxB22k-s216I8PJ9Rkriyjt_qTYmvLWajjNYzOfwkzvh-AA9E1vqm8c7hzykH7XV0qFEAVZFV7UH9ZbX8Wu3PfjdSHFIdt235ImYeQuLgBmBSydRYUhhpN_uTBnEbm0j9xWFjLf-pYu6Yw3N765mB8YKAjmlfpdRssnfSMO7YoDx3z7kY50"/>
+</div>
+<div class="flex-1">
+<p class="font-display text-blue-900 dark:text-white text-sm">DRAGON MASTER</p>
+<div class="w-full h-3 bg-white/50 dark:bg-gray-700 rounded-full mt-1 overflow-hidden">
+<div class="h-full w-[62%] bg-accent-pink progress-striped"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-display text-accent-yellow text-sm">21,300</p>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-black/20 rounded-2xl p-3 flex items-center gap-3 border-b-4 border-black/5">
+<div class="w-8 font-display text-primary text-center text-lg">3</div>
+<div class="w-10 h-10 bg-accent-pink rounded-full border-2 border-white overflow-hidden">
+<img alt="Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAJtF37WUBCGIDT-U7541LofqqDzCbfTkuiW4U4E5xnUvOTSrnIHYv2CMBx7LLRR95D9ayBBuJlCakoYSz9e_K57hjXQSYhPFWt5obkBhEUcOXnmait5oLcOr4eFoVZAZv9NHAuN1JB9AuhQQ-EAlVlsUT9etUzbu3UJSCiZL7sl5dgQoMbW4lgiD_y9pAhOQ062YpB44QNxdDoRsfQ_8B--0lUF9_18QTeOkyGJkk8eVa-zLP-77mK2IXiMpR9R-HNlpU2gstmmg"/>
+</div>
+<div class="flex-1">
+<p class="font-display text-blue-900 dark:text-white text-sm">CANDY_GIRL</p>
+<div class="w-full h-3 bg-white/50 dark:bg-gray-700 rounded-full mt-1 overflow-hidden">
+<div class="h-full w-[45%] bg-primary progress-striped"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-display text-accent-yellow text-sm">18,900</p>
+</div>
+</div>
+<div class="bg-white/60 dark:bg-black/20 rounded-2xl p-3 flex items-center gap-3 border-b-4 border-black/5">
+<div class="w-8 font-display text-primary text-center text-lg text-opacity-70">4</div>
+<div class="w-10 h-10 bg-blue-300 rounded-full border-2 border-white overflow-hidden">
+<img alt="Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyr6AqtDLw-Tz3fFr8VMizTrThdow9her8ZbEfZNyIAZ03jM1J7J83TKiSAikoh6iXNIsoT5eATGhTNIGbskTb9-MFnxnXSenoKf8mlEJvelyOdNdMngZrlwgV47iGcPkvHHhFNeV5tdGtoHwoTRv0jCug85BWRKjIdh3aGUY1mhi3hQA6GQ4Ca0GTf0RiOcVDKYVYuUA3hQIMGQ26Ef6F3_CyoP42jbr1CPpoOyoOJRA_yY3a5rD7gQ0EqTsBce7utEpk2F6RMns"/>
+</div>
+<div class="flex-1">
+<p class="font-display text-blue-900 dark:text-white text-sm">SUPERLIAM</p>
+<div class="w-full h-3 bg-white/50 dark:bg-gray-700 rounded-full mt-1 overflow-hidden">
+<div class="h-full w-[30%] bg-accent-yellow progress-striped"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-display text-accent-yellow text-sm">15,200</p>
+</div>
+</div>
+<div class="bg-primary/20 dark:bg-primary/10 rounded-2xl p-3 flex items-center gap-3 border-2 border-primary border-dashed">
+<div class="w-8 font-display text-primary text-center text-lg">842</div>
+<div class="w-10 h-10 bg-white rounded-full border-2 border-primary overflow-hidden">
+<img alt="My Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0OXEsx0Z0dAbG145s3TH-MvNevNicWNUePLUnPj0qliZI9OYkuU8AtcqPf1PewSYm-aVqAy-A8_OpeFT4l-KL95kGuoSHGpXAVMlVSrUv-eCQ6zo2RbkQvWmuuYY5K2w8ospr_AAyKqvi8AVwoLzDNEZGXqKr-4XyOqrZF7h2hl49OGiueQowH0nA5oSExMqJ_1dVHA8Z6N0g_gtzry0qUq95c5l2KCjd9jHiTUxYFv1eT1F7KAfCIlQwaQr8KSpjfr8l1SPmLHs"/>
+</div>
+<div class="flex-1">
+<p class="font-display text-primary text-sm uppercase">YOU (ME)</p>
+<div class="w-full h-3 bg-white/50 dark:bg-gray-700 rounded-full mt-1 overflow-hidden">
+<div class="h-full w-[15%] bg-accent-yellow progress-striped"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-display text-accent-yellow text-sm">4,500</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-white/30 dark:bg-black/30 border-t border-white/20 rounded-b-xl flex items-center justify-around">
+<div class="text-center">
+<img alt="XP" class="w-6 h-6 mx-auto mb-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkOqeqG6PZYksgwZ9xDquPoYYuEBzg1hQOMfjvWAdgh03w5q7ku6fifM2wad0fHRTT_eIV9wP48M7c_qCpetylspJcQpeNClt4-HUvsLTsI6vEMabPhzrMyFhY_AE9__o3qG8kQ81mlGfulCiyGhAEJ8PmPE_HyPTicvpxlqIhtDBh7oCwlvWa7bfHGJRhyw7meitCOA3DANJlKoQWzUPOFw0sprB3_IOn-cBkt2pFHnfCKAMLmLpeA2ADJUKeX4qpZbGccWPuPoY"/>
+<span class="text-xs font-display text-blue-800 dark:text-blue-100 uppercase">XP 1.2k</span>
+</div>
+<div class="text-center">
+<img alt="Boost" class="w-6 h-6 mx-auto mb-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApnWofID84SOOsnme9BL_6EyCP36EDrsM5nuhUOfX7UU84ZjozMdcpEU1iAiym9Gr1TXi2r1h2eN49M1VQbLt12RQBethyu7ItyLnhjr3ccczbWpmCRRlji3Y6YvKX1eju0iSlaJjyhXB0VOs-P47NeiDEjfc8t_Cb_4yD_3oBHKgD1mUSCq7vaKXhXIzl70alBTHwJO0pNLIcc8J6Jf5bFSGrbzTtjnbi1G1-Gl3h-0HuVlkLUw1hpvn01-JnUNivbj3MIKojILM"/>
+<span class="text-xs font-display text-blue-800 dark:text-blue-100 uppercase">BOOSTS x3</span>
+</div>
+</div>
+</div>
+<div class="h-20 flex items-center justify-around px-2 relative mt-4">
+<button class="flex flex-col items-center gap-1 group">
+<div class="p-2 rounded-xl bg-white/40 dark:bg-black/20 group-hover:bg-primary/20 transition-all">
+<span class="material-icons text-primary text-2xl">home</span>
+</div>
+<span class="text-[10px] font-display text-primary">HOME</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<div class="p-2 rounded-xl bg-primary/40 dark:bg-primary/60 shadow-lg scale-110">
+<span class="material-icons text-white text-2xl">leaderboard</span>
+</div>
+<span class="text-[10px] font-display text-primary">RANK</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<div class="p-2 rounded-xl bg-white/40 dark:bg-black/20 group-hover:bg-primary/20 transition-all">
+<span class="material-icons text-primary text-2xl">shopping_cart</span>
+</div>
+<span class="text-[10px] font-display text-primary">SHOP</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<div class="p-2 rounded-xl bg-white/40 dark:bg-black/20 group-hover:bg-primary/20 transition-all">
+<span class="material-icons text-primary text-2xl">settings</span>
+</div>
+<span class="text-[10px] font-display text-primary">GEAR</span>
+</button>
+</div>
+<div class="w-32 h-1 bg-white/40 rounded-full mx-auto mt-2"></div>
+</div>
+
+</body></html>

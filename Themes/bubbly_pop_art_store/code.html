@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bubbly Pop Art Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Nunito:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#85E61D", // The vibrant green from the reference
+              "store-yellow": "#FFC107",
+              "store-orange": "#FF9800",
+              "background-light": "#2D2D2D",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              display: ["Fredoka One", "cursive"],
+              body: ["Nunito", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "24px",
+              "xl": "32px",
+              "2xl": "40px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .bubbly-border {
+            border: 8px solid #FF9800;
+            box-shadow: 0 8px 0 #E65100, inset 0 0 15px rgba(255, 193, 7, 0.4);
+            background: repeating-linear-gradient(
+                -45deg,
+                #FFC107,
+                #FFC107 15px,
+                #FFB300 15px,
+                #FFB300 30px
+            );
+        }
+        .inner-panel {
+            background-color: #FFF9E6;
+            border: 4px solid #8D6E63;
+            box-shadow: inset 0 6px 0 rgba(0,0,0,0.1);
+        }
+        .bubbly-button {
+            background: #85E61D;
+            border-bottom: 6px solid #558B2F;
+            border-left: 2px solid #9CCC65;
+            border-right: 2px solid #558B2F;
+            position: relative;
+            transition: transform 0.1s;
+        }
+        .bubbly-button:active {
+            transform: translateY(4px);
+            border-bottom-width: 2px;
+        }
+        .bubble-accent {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+        .close-btn {
+            background: #FF4081;
+            border: 4px solid #C2185B;
+            box-shadow: 0 4px 0 #880E4F;
+        }
+        .item-slot {
+            background: #FFF;
+            border: 3px solid #E0E0E0;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.05);
+        }.share-shape {
+            position: relative;
+            background: #85E61D;
+            border-bottom: 8px solid #558B2F;
+            filter: drop-shadow(0 4px 0 rgba(0,0,0,0.2));
+        }
+        .cloud-circle {
+            background: #85E61D;
+            position: absolute;
+            border-radius: 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 font-body overflow-hidden">
+<div class="relative w-full max-w-[400px] h-[800px] flex flex-col items-center justify-center">
+<div class="w-full bubbly-border rounded-2xl p-3 relative">
+<button class="close-btn absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-2xl z-20">
+<span class="material-icons">close</span>
+</button>
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-48 h-16 bubbly-button rounded-xl flex items-center justify-center z-10">
+<h1 class="font-display text-white text-3xl tracking-wider drop-shadow-md">STORE</h1>
+<div class="bubble-accent w-8 h-4 top-2 left-4 rounded-full"></div>
+</div>
+<div class="inner-panel rounded-xl mt-6 p-4 flex flex-col gap-4 max-h-[600px] overflow-y-auto">
+<div class="flex justify-between items-center bg-black/5 p-2 rounded-full px-4 mb-2">
+<div class="flex items-center gap-2">
+<img alt="Coins" class="w-6 h-6 rounded-full border-2 border-yellow-600" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnUn2ENKz8E7hQlJVvnSIkldKBU_nR22hxmwZnHYX2PTX06tn7N-gUJ5dTahQIe4PpLs2DirHB1_erA4V84dJPfR1Y8-quDlwLNuZculiO5PoWXOshPekAwjXT5NuyHUz_qxk3zCVG8BBu7vlN1RI9VEpUeVN8FOEWCRtK-fxhq3a0lH1o-qoMMa8ngGFomy8K-7JbEqlcDxVJ2Oi7p9MxPbxQ0s6KS1WnlVHaUKt1hL0uD7FsELIm3ElxYmOXh1oltkSqY738Zy0"/>
+<span class="font-black text-amber-900">12,450</span>
+</div>
+<div class="flex items-center gap-2">
+<img alt="Gems" class="w-6 h-6 rounded-full border-2 border-cyan-600" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQfrn6ABJHpg1M0cYM5kCVRwK6USNTLJ95Z2pUFYBOc7WjjXEvA_5x5oETTbPGv6cAHMFTRtotYPsuwP5Ozlrp0lcEFQG7-GVbl-ORXW655G6RaFKVEbni0xyLa2-0m9fbnrwNdPW4Zu-08ktLw9eIQuTYR_3zUs3d3z1HPCdASgq8xzVtPYPlQez9WogUfhxzzQjgO7uzsvLQ4LwmxuOgiguZ13laL9MMkfFbfFkoceNjKe9TOcuqF5vN4xw7JS7A_QYdccDrB5Y"/>
+<span class="font-black text-amber-900">150</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="item-slot rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-blue-100 rounded-xl border-2 border-blue-200 flex items-center justify-center text-red-500">
+<span class="material-icons text-5xl">magnet</span>
+</div>
+<div>
+<h3 class="font-black text-amber-900 text-lg uppercase leading-none">Magnet</h3>
+<p class="text-amber-700/60 text-xs font-bold">Collects nearby coins</p>
+</div>
+</div>
+<button class="bubbly-button rounded-full py-2 px-4 flex items-center gap-2">
+<span class="font-black text-white text-sm">300</span>
+<img alt="Coin Icon" class="w-4 h-4 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANFC7wIRBFT8tswH7_V13zdpn_fvna3GmPYKFPpUMH3EI8J2nkoJrum_dLj3M-h-2rFkK47t3mlDOSQdnIRD5lsWXXKWXi00fyy5s5m1YzMvMNsG1HZM7Hd3Ra1GxvCoTEr_vewvjadKTedtX6nqk9j77F0MbB91P3OclsZJLIND8vsOnJPv12ji38hSIEHeltTrayx_m6SnsjtHpPvPIpvzpDUH0IQ2yxVL20WObumnOmjcrAt_eRuwDmVB11sntsU1U7i0lceHU"/>
+</button>
+</div>
+<div class="item-slot rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-orange-100 rounded-xl border-2 border-orange-200 flex items-center justify-center text-orange-500">
+<span class="material-icons text-5xl">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-black text-amber-900 text-lg uppercase leading-none">Rocket</h3>
+<p class="text-amber-700/60 text-xs font-bold">Blast through levels</p>
+</div>
+</div>
+<button class="bubbly-button rounded-full py-2 px-4 flex items-center gap-2">
+<span class="font-black text-white text-sm">450</span>
+<img alt="Coin Icon" class="w-4 h-4 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARW_IAA4xS5HzYwafolUIrc7HvR5BJ6AfCKQ5TL70Zi5bj3i9ZcwcgzQf2iqAGH3g9FcIg2HsA04a_CNaO_6l1jcxkO_aJdYmHw8BSe2BZkthXDpiWpj2Oz1qTy-rwikioP-UKIAnBG2XFeRwMPNWP-vojXX6CAoCL40ipLlBGL_ZNVyUqlY3E3XxLHL8Ebwo_HR5NfNxKpj_Gwvk2uM6kKwvZ7Dk0cYoqLAHYoptCLz6mhLjZ_VqgmgHDeA4zkKzCAD6XaJS6f1k"/>
+</button>
+</div>
+<div class="item-slot rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-red-100 rounded-xl border-2 border-red-200 flex items-center justify-center text-slate-800">
+<span class="material-icons text-5xl">auto_fix_high</span>
+</div>
+<div>
+<h3 class="font-black text-amber-900 text-lg uppercase leading-none">Mega Bomb</h3>
+<p class="text-amber-700/60 text-xs font-bold">Clears whole screen</p>
+</div>
+</div>
+<button class="bubbly-button rounded-full py-2 px-4 flex items-center gap-2">
+<span class="font-black text-white text-sm">600</span>
+<img alt="Coin Icon" class="w-4 h-4 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPsPexUo3Qxsdy50QZWGydMuxqfpgQsL2VnRPIgTlaXkoCGNJxCHqLKwsMeVW5c6gFeC8BjbgPgjGPkNkLDa_AYWpALnXy9dZAwUBijVw59QYcTwnhIn8oRqiVUgUFq2qGP4KoNuVozn7oSVJeS0cUDfvDG8yV3eJHClHqNCa8DTmbtclUXSy8y77qo46RHOMwy0M9qW_XcitHoJVQjbE6EpKW89nfql02lLn8RYhoWIUoD17SUV21VpcXikpNHlZFhJJt0cwMzYM"/>
+</button>
+</div>
+<div class="item-slot rounded-2xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-yellow-100 rounded-xl border-2 border-yellow-200 flex items-center justify-center text-yellow-600">
+<span class="material-icons text-5xl">bolt</span>
+</div>
+<div>
+<h3 class="font-black text-amber-900 text-lg uppercase leading-none">Thunder</h3>
+<p class="text-amber-700/60 text-xs font-bold">Zaps random targets</p>
+</div>
+</div>
+<button class="bubbly-button rounded-full py-2 px-4 flex items-center gap-2">
+<span class="font-black text-white text-sm">250</span>
+<img alt="Coin Icon" class="w-4 h-4 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ARwxprcLUS-9ugHetssnmUTmAQ1UPn8hZPp8ADQA82Dy_2WXVKMOcVUJ73zuDrlxQ7WAL5fxGkscjWZntBkVSsS1D9Pffi6s5eZMlJWqPHYLQOXEnETm30pU9sQD-qW--gD7XzxBYA9stWt9CCxAWn8HsF5I1obQBqZXewdFoyFJQLN2p2D6ZxDJeU-Kxyo5sWKr0H4lOpyEc8NQRPir8b9ohQ8D5dF4gt9Bra-01iCXHY_qnQ2_l7FiroOmJ0qdKuolmbU0u1w"/>
+</button>
+</div>
+</div>
+<div class="mt-4 flex flex-col items-center pb-2">
+<p class="font-black text-amber-900/40 text-xs mb-3 uppercase tracking-widest">Help Friends &amp; Get Rewards</p>
+<button class="share-shape group px-12 py-4 rounded-full flex items-center justify-center relative active:translate-y-1 transition-transform">
+<div class="cloud-circle w-8 h-8 -top-3 left-4 border-t-2 border-green-300"></div>
+<div class="cloud-circle w-10 h-10 -top-5 left-10 border-t-2 border-green-300"></div>
+<div class="cloud-circle w-6 h-6 -bottom-2 right-4"></div>
+<span class="font-display text-white text-3xl tracking-tighter drop-shadow-lg relative z-10 flex items-center gap-2">
+                            SHARE
+                            <span class="material-icons text-3xl">share</span>
+</span>
+<div class="bubble-accent w-16 h-6 top-2 left-6 rounded-full bg-white/40"></div>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-10 flex gap-4">
+<div class="w-12 h-12 bg-pink-500 border-4 border-pink-700 rounded-full shadow-lg flex items-center justify-center text-white">
+<span class="material-icons">favorite</span>
+</div>
+<div class="w-12 h-12 bg-primary border-4 border-green-700 rounded-full shadow-lg flex items-center justify-center text-white">
+<span class="material-icons">star</span>
+</div>
+<div class="w-12 h-12 bg-store-orange border-4 border-orange-700 rounded-full shadow-lg flex items-center justify-center text-white">
+<span class="material-icons">settings</span>
+</div>
+</div>
+</div>
+
+</body></html>

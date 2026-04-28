@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/api internals
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://zenithtools.vercel.app/sitemap.xml

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg: #020617;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #1e293b;
+    --ad-bg: #0f172a;
+    --glass: rgba(30, 41, 59, 0.7);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 { 
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem; 
+    font-weight: 800; 
+    letter-spacing: -0.04em; 
+    margin-bottom: 0.5rem;
+}
+.highlight { 
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ad-slot {
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--ad-bg);
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+/* Inputs - Top 25% Focus */
+.input-section { margin-top: 1rem; }
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 1.25rem;
+    border: 2px solid var(--border);
+    border-radius: 1.25rem;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.125rem;
+    resize: none;
+    transition: border-color 0.2s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.icon-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--border);
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Options Panel */
+.secondary-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.options-panel {
+    background: var(--ad-bg);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.options-panel.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    opacity: 0;
+}
+
+.option-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.option-item label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.toggle-label {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* Results */
+.kana-result {
+    min-height: 120px;
+    padding: 2.5rem;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text);
+    border-radius: 2rem;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Footer */
+.global-footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+}
+
+.global-footer nav {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.global-footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10b981;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 700;
+}
+
+.hidden { display: none; }

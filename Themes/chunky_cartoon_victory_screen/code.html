@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chunky Cartoon Victory Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF9800", // Vibrant Orange
+                        secondary: "#4CAF50", // Vibrant Green
+                        "panel-cream": "#FFF9E6",
+                        "panel-dark": "#2D3748",
+                        "background-light": "#E5E7EB",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        display: ["Fredoka", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "2rem",
+                        "xl": "3rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .chunky-shadow-orange {
+            box-shadow: 0 8px 0 0 #E65100;
+        }
+        .chunky-shadow-green {
+            box-shadow: 0 8px 0 0 #2E7D32;
+        }
+        .chunky-shadow-blue {
+            box-shadow: 0 6px 0 0 #1565C0;
+        }
+        .chunky-shadow-white {
+            box-shadow: 0 8px 0 0 rgba(0,0,0,0.1);
+        }
+        .chunky-shadow-panel {
+            box-shadow: 0 12px 0 0 rgba(0,0,0,0.1);
+        }
+        .ribbon-edge {
+            clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%, 0 0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<div class="relative w-full max-w-md aspect-[9/19.5] flex flex-col items-center justify-center">
+<div class="relative w-full bg-panel-cream dark:bg-panel-dark border-8 border-white dark:border-gray-700 rounded-[3rem] p-8 flex flex-col items-center chunky-shadow-panel">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 w-[110%]">
+<div class="bg-primary text-white text-4xl font-bold py-4 px-10 text-center rounded-2xl chunky-shadow-orange transform rotate-[-1deg] border-4 border-white dark:border-gray-800 uppercase tracking-wider">
+                    COMPLETED
+                </div>
+</div>
+<div class="mt-14 mb-8 flex items-end justify-center gap-2">
+<div class="transform -rotate-12 translate-y-2">
+<span class="material-icons text-6xl text-yellow-400 drop-shadow-md">star</span>
+</div>
+<div class="transform scale-125 z-10">
+<span class="material-icons text-7xl text-yellow-400 drop-shadow-lg">star</span>
+</div>
+<div class="transform rotate-12 translate-y-2 opacity-40">
+<span class="material-icons text-6xl text-gray-400">star</span>
+</div>
+</div>
+<div class="text-center mb-8">
+<p class="text-gray-500 dark:text-gray-400 text-xl font-semibold uppercase tracking-widest mb-1">Score</p>
+<h2 class="text-5xl font-bold text-gray-800 dark:text-white">12,450</h2>
+</div>
+<div class="w-full bg-white/50 dark:bg-black/20 rounded-3xl p-6 mb-10 grid grid-cols-2 gap-4 border-4 border-dashed border-gray-300 dark:border-gray-600">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center border-4 border-yellow-600">
+<span class="material-icons text-white">monetization_on</span>
+</div>
+<span class="text-2xl font-bold text-gray-700 dark:text-gray-200">+350</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center border-4 border-blue-600">
+<span class="material-icons text-white">bolt</span>
+</div>
+<span class="text-2xl font-bold text-gray-700 dark:text-gray-200">+3</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center border-4 border-red-700">
+<span class="material-icons text-white">eco</span>
+</div>
+<span class="text-2xl font-bold text-gray-700 dark:text-gray-200">+15</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center border-4 border-green-700">
+<span class="material-icons text-white">apple</span>
+</div>
+<span class="text-2xl font-bold text-gray-700 dark:text-gray-200">+17</span>
+</div>
+</div>
+<div class="w-full space-y-6">
+<button class="w-full bg-secondary text-white text-3xl font-bold py-5 rounded-3xl chunky-shadow-green border-4 border-white dark:border-gray-800 hover:translate-y-1 hover:shadow-none transition-all active:translate-y-2 uppercase tracking-wide">
+                    NEXT
+                </button>
+<div class="flex justify-center gap-8">
+<button class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center chunky-shadow-blue border-4 border-white dark:border-gray-800 hover:translate-y-1 transition-all active:translate-y-2">
+<span class="material-icons text-white text-3xl">refresh</span>
+</button>
+<button class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center chunky-shadow-blue border-4 border-white dark:border-gray-800 hover:translate-y-1 transition-all active:translate-y-2">
+<span class="material-icons text-white text-3xl">home</span>
+</button>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 w-20 h-20 bg-red-600 rounded-full border-4 border-white dark:border-gray-800 flex items-center justify-center rotate-12 transform shadow-lg">
+<span class="material-icons text-white text-4xl">check</span>
+</div>
+</div>
+<div class="absolute -z-10 top-20 -left-10 w-24 h-24 opacity-20 dark:opacity-10 rotate-45">
+<img alt="Abstract game background shape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSZhrfGH24h6WC0vxECBh59r14_PEi9XK_k6hOmC7-YJ61DyWyA4m99Kohm1UNt42qROIAUdvIsqGoAz9ch3ht2gxa3-FiUJcTMayi7UYhKA84cltHdzLkEYkR7K8OveSbOqmI2eBhnrfQOkOZ5BRU4_IXXhzXHM__9ItM7elISKWCOwcTXxDBmoUyLF-QNCzv1Cf-DiamQjiMsYA2AulR00bH-0k4nXBE2rgMDa0g4x9aQwsHhEgLKTPEE_JLnXhY1E1uqCZvyP0"/>
+</div>
+<div class="absolute -z-10 bottom-20 -right-10 w-32 h-32 opacity-20 dark:opacity-10 -rotate-12">
+<img alt="Abstract game background shape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxbojLwVvb4Ke81R4rMu9m9HJln1RKq3GaFXn68gTvubOlwWW_tdcdEpviqfJbo4aZFJWPEJa9BOSutkchN-OK-gQ53lK68zjxRDcFczuvaHaG7zZ9pB7DmkTFouZ_-ur-M0XfUy0DmAVCqqP4lytPfUE_Yx3DNYQFl_QOAPkmrR88ZjhdjdCZ1EOS_esseWirip0256VxqHYtzF5rg5_ZGRISE8jwONh9xBw8b9I0s1S-jdv0qhFYlVjnjdJ4b4lT1on0Fid81T4"/>
+</div>
+</div>
+<div class="fixed bottom-4 right-4 flex flex-col gap-2">
+<button class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-gray-200 dark:border-gray-700" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons dark:text-white">dark_mode</span>
+</button>
+</div>
+
+</body></html>

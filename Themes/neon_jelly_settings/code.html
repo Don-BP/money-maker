@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neon Jelly Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&amp;family=Material+Icons&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6", // Neon Blue
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#120B2E", // Very dark purple
+                        "jelly-pink": "#FF4DB2",
+                        "jelly-blue": "#3E94FF",
+                        "jelly-yellow": "#FFD23F",
+                        "jelly-green": "#72D639",
+                        "jelly-red": "#FF5757",
+                        "jelly-panel": "#2D62D1",
+                        "jelly-slider": "#FF8A3D",
+                        "jelly-trough": "#1E418C",
+                    },
+                    fontFamily: {
+                        display: ["Fredoka", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        'pill': "9999px",
+                        'jelly': "24px",
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 4px 0 0 #1E418C, inset 0 4px 4px rgba(255,255,255,0.3)',
+                        'neon-pink': '0 4px 0 0 #A31E69, inset 0 4px 4px rgba(255,255,255,0.3)',
+                        'neon-yellow': '0 4px 0 0 #C49B1A, inset 0 4px 4px rgba(255,255,255,0.3)',
+                        'neon-green': '0 4px 0 0 #4A9124, inset 0 4px 4px rgba(255,255,255,0.3)',
+                        'neon-red': '0 4px 0 0 #B02E2E, inset 0 4px 4px rgba(255,255,255,0.3)',
+                        'panel-inner': 'inset 0 0 15px rgba(0,0,0,0.4)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .jelly-gradient-blue {
+            background: linear-gradient(180deg, #5CABFF 0%, #3E94FF 100%);
+        }
+        .jelly-gradient-pink {
+            background: linear-gradient(180deg, #FF7BD0 0%, #FF4DB2 100%);
+        }
+        .jelly-gradient-yellow {
+            background: linear-gradient(180deg, #FFE071 0%, #FFD23F 100%);
+        }
+        .jelly-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 0 currentColor !important;
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            background: #FFD23F;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .jelly-border {
+            border: 6px solid #5CABFF;
+        }
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 10%;
+            width: 80%;
+            height: 25%;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 overflow-hidden">
+<div class="relative w-full max-w-[390px] h-[844px] bg-background-light dark:bg-background-dark rounded-[50px] shadow-2xl border-[8px] border-gray-800 dark:border-slate-900 flex flex-col items-center justify-center p-6 overflow-hidden">
+<div class="mb-8 text-center">
+<h1 class="text-4xl font-bold text-white tracking-wider drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+<span class="text-jelly-blue">OPTIONS</span>
+</h1>
+</div>
+<div class="w-full bg-jelly-panel rounded-jelly p-1 jelly-border shadow-lg relative">
+<div class="bg-jelly-panel/50 rounded-[18px] p-6 shadow-panel-inner space-y-8">
+<div class="space-y-3">
+<div class="flex justify-between items-center px-2">
+<span class="text-xl font-bold text-white uppercase tracking-wide">Music</span>
+<span class="material-icons text-white">music_note</span>
+</div>
+<div class="relative h-10 w-full bg-jelly-trough rounded-pill p-1 shadow-inner overflow-hidden">
+<div class="h-full bg-jelly-slider rounded-pill shine-effect w-[75%]"></div>
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer slider-thumb" type="range" value="75"/>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center px-2">
+<span class="text-xl font-bold text-white uppercase tracking-wide">Voice</span>
+<span class="material-icons text-white">record_voice_over</span>
+</div>
+<div class="relative h-10 w-full bg-jelly-trough rounded-pill p-1 shadow-inner overflow-hidden">
+<div class="h-full bg-jelly-slider rounded-pill shine-effect w-[45%]"></div>
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer slider-thumb" type="range" value="45"/>
+</div>
+</div>
+<div class="flex justify-center gap-6 pt-4">
+<button class="jelly-button w-16 h-16 bg-jelly-green rounded-2xl flex items-center justify-center shadow-neon-green shine-effect text-white">
+<span class="material-icons text-4xl font-bold">check</span>
+</button>
+<button class="jelly-button w-16 h-16 bg-jelly-red rounded-2xl flex items-center justify-center shadow-neon-red shine-effect text-white">
+<span class="material-icons text-4xl font-bold">close</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 w-full space-y-4 px-4">
+<button class="jelly-button w-full py-4 jelly-gradient-pink rounded-pill text-white text-2xl font-bold uppercase tracking-widest shadow-neon-pink shine-effect">
+                Restart
+            </button>
+<button class="jelly-button w-full py-4 jelly-gradient-yellow rounded-pill text-white text-2xl font-bold uppercase tracking-widest shadow-neon-yellow shine-effect">
+                Help
+            </button>
+</div>
+<div class="absolute top-10 right-10 w-12 h-12 jelly-gradient-blue rounded-full opacity-20 blur-sm"></div>
+<div class="absolute bottom-20 left-10 w-16 h-16 jelly-gradient-pink rounded-full opacity-10 blur-md"></div>
+<div class="absolute top-1/4 left-[-20px] w-24 h-24 bg-jelly-yellow/10 rounded-full blur-xl"></div>
+<div class="absolute top-8 left-8 text-jelly-pink/30 rotate-12">
+<span class="material-icons text-4xl">favorite</span>
+</div>
+<div class="absolute bottom-40 right-4 text-jelly-yellow/30 -rotate-12">
+<span class="material-icons text-4xl">star</span>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full"></div> 
+</div>
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-20 overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent"></div>
+</div>
+
+</body></html>

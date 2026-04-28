@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glossy Blue Menu Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Nunito:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#39B5E0",
+                        secondary: "#FFD4B2",
+                        "background-light": "#D8E3F0",
+                        "background-dark": "#1A1B26",
+                        "panel-border": "#4DB9FF",
+                        "panel-inner": "#FBE4D8",
+                    },
+                    fontFamily: {
+                        display: ["Fredoka One", "cursive"],
+                        body: ["Nunito", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'bubble': '2rem',
+                        'button': '1.5rem',
+                    },
+                    boxShadow: {
+                        'glossy': 'inset 0 4px 6px -1px rgba(255, 255, 255, 0.7), 0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                        'inner-heavy': 'inset 0 4px 8px 0 rgba(0, 0, 0, 0.1)',
+                        'outer-bold': '0 8px 0px 0px rgba(57, 181, 224, 0.4)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .glossy-panel {
+            background: linear-gradient(180deg, #60CFFF 0%, #39B5E0 100%);
+            box-shadow: inset 0 6px 0 rgba(255,255,255,0.4), 0 8px 0 rgba(0,0,0,0.1);
+        }
+        .glossy-button {
+            transition: transform 0.1s ease;
+            box-shadow: inset 0 4px 0 rgba(255,255,255,0.4), 0 6px 0 rgba(0,0,0,0.15);
+        }
+        .glossy-button:active {
+            transform: translateY(4px);
+            box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 2px 0 rgba(0,0,0,0.1);
+        }
+        .inner-peach {
+            background-color: #FBE4D8;
+            box-shadow: inset 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .status-bar {
+            background: rgba(255,255,255,0.3);
+            border: 4px solid #39B5E0;
+        }
+        .status-fill {
+            background: linear-gradient(90deg, #39B5E0, #60CFFF);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body min-h-screen flex items-center justify-center p-4">
+<div class="relative w-full max-w-[400px] h-[844px] bg-[#E2E8F7] dark:bg-[#121420] rounded-[3rem] overflow-hidden border-8 border-slate-800 shadow-2xl flex flex-col">
+<div class="pt-12 px-6 space-y-3">
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center bg-white/50 dark:bg-black/20 rounded-full p-1 border-4 border-primary">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+<span class="material-icons-round text-white text-xl">bolt</span>
+</div>
+<div class="flex-1 h-4 bg-secondary/50 rounded-full mx-2 overflow-hidden">
+<div class="w-3/4 h-full bg-primary rounded-full"></div>
+</div>
+<span class="text-xs font-black text-primary pr-2">50</span>
+</div>
+<div class="flex items-center bg-white/50 dark:bg-black/20 rounded-full p-1 border-4 border-primary">
+<div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg">
+<span class="material-icons-round text-white text-xl">star</span>
+</div>
+<div class="flex-1 h-4 bg-secondary/50 rounded-full mx-2 overflow-hidden">
+<div class="w-1/2 h-full bg-primary rounded-full"></div>
+</div>
+<span class="text-xs font-black text-primary pr-2">12</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center bg-white/50 dark:bg-black/20 rounded-full p-1 border-4 border-primary">
+<div class="w-8 h-8 rounded-full bg-orange-400 flex items-center justify-center shadow-lg">
+<span class="material-icons-round text-white text-xl">monetization_on</span>
+</div>
+<div class="flex-1 h-4 bg-secondary/50 rounded-full mx-2 overflow-hidden">
+<div class="w-full h-full bg-primary rounded-full"></div>
+</div>
+<span class="text-xs font-black text-primary pr-2">999</span>
+</div>
+<div class="flex items-center bg-white/50 dark:bg-black/20 rounded-full p-1 border-4 border-primary">
+<div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center shadow-lg">
+<span class="material-icons-round text-white text-xl">favorite</span>
+</div>
+<div class="flex-1 h-4 bg-secondary/50 rounded-full mx-2 overflow-hidden">
+<div class="w-1/4 h-full bg-primary rounded-full"></div>
+</div>
+<span class="text-xs font-black text-primary pr-2">5</span>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center px-8 py-4">
+<div class="w-full max-w-[320px] glossy-panel p-4 rounded-[3rem] border-b-8 border-primary/40 relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 glossy-panel px-10 py-2 rounded-full border-4 border-white shadow-lg">
+<h1 class="font-display text-white text-2xl tracking-wider">MENU</h1>
+</div>
+<div class="inner-peach mt-6 rounded-[2rem] p-6 space-y-4">
+<button class="w-full glossy-button bg-[#FFD4B2] border-4 border-primary rounded-full py-4 text-primary font-display text-xl uppercase tracking-widest hover:brightness-105 active:scale-95 transition-all">
+                        PLAY
+                    </button>
+<button class="w-full glossy-button bg-[#FFD4B2] border-4 border-primary rounded-full py-4 text-primary font-display text-xl uppercase tracking-widest hover:brightness-105 active:scale-95 transition-all">
+                        OPTIONS
+                    </button>
+<button class="w-full glossy-button bg-[#FFD4B2] border-4 border-primary rounded-full py-4 text-primary font-display text-xl uppercase tracking-widest hover:brightness-105 active:scale-95 transition-all">
+                        PROFILE
+                    </button>
+<button class="w-full glossy-button bg-[#FFD4B2] border-4 border-primary rounded-full py-4 text-primary font-display text-xl uppercase tracking-widest hover:brightness-105 active:scale-95 transition-all">
+                        SHOP
+                    </button>
+<button class="w-full glossy-button bg-[#FFD4B2] border-4 border-primary rounded-full py-4 text-primary font-display text-xl uppercase tracking-widest hover:brightness-105 active:scale-95 transition-all">
+                        EXIT
+                    </button>
+</div>
+<button class="absolute -bottom-4 -right-2 w-12 h-12 glossy-panel border-4 border-white rounded-xl flex items-center justify-center shadow-xl active:scale-90 transition-transform">
+<span class="material-icons-round text-white font-bold">close</span>
+</button>
+</div>
+</div>
+<div class="pb-12 px-10">
+<div class="flex justify-around items-center space-x-4">
+<button class="w-16 h-16 glossy-panel border-4 border-white/60 rounded-2xl flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-icons-round text-white text-3xl">home</span>
+</button>
+<button class="w-16 h-16 glossy-panel border-4 border-white/60 rounded-2xl flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-icons-round text-white text-3xl">person</span>
+</button>
+<button class="w-16 h-16 glossy-panel border-4 border-white/60 rounded-2xl flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-icons-round text-white text-3xl">emoji_events</span>
+</button>
+<button class="w-16 h-16 glossy-panel border-4 border-white/60 rounded-2xl flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-icons-round text-white text-3xl">settings</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-black/20 dark:bg-white/20 rounded-full"></div>
+</div>
+
+</body></html>
