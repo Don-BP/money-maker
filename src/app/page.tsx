@@ -1,65 +1,136 @@
-import Image from "next/image";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "ZenithTools — Free Online Utilities",
+  "url": "https://zenithtools.vercel.app",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Username Generator", "url": "https://zenithtools.vercel.app/tools/username-generator/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Word Finder", "url": "https://zenithtools.vercel.app/tools/word-finder/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Recipe Scaler", "url": "https://zenithtools.vercel.app/tools/recipe-scaler/index.html" },
+    { "@type": "ListItem", "position": 4, "name": "Romaji to Kana", "url": "https://zenithtools.vercel.app/tools/romaji-to-kana/index.html" },
+    { "@type": "ListItem", "position": 5, "name": "Network Inspector", "url": "https://zenithtools.vercel.app/tools/ip-checker/index.html" },
+    { "@type": "ListItem", "position": 6, "name": "Word Search Maker", "url": "https://zenithtools.vercel.app/tools/word-search/index.html" }
+  ]
+};
+
+const tools = [
+  {
+    id: "username-generator",
+    name: "Username Generator",
+    description: "Generate unique, creative usernames instantly.",
+    icon: "✏️",
+    path: "/tools/username-generator/index.html",
+    badge: "01",
+  },
+  {
+    id: "word-finder",
+    name: "Word Finder",
+    description: "Find words by pattern, length, or letters for puzzles and games.",
+    icon: "🔍",
+    path: "/tools/word-finder/index.html",
+    badge: "02",
+  },
+  {
+    id: "recipe-scaler",
+    name: "Recipe Scaler",
+    description: "Scale any recipe up or down to feed any number of people.",
+    icon: "🍳",
+    path: "/tools/recipe-scaler/index.html",
+    badge: "03",
+  },
+  {
+    id: "romaji-to-kana",
+    name: "Romaji to Kana",
+    description: "Convert romaji text to hiragana or katakana instantly.",
+    icon: "🈳",
+    path: "/tools/romaji-to-kana/index.html",
+    badge: "04",
+  },
+  {
+    id: "ip-checker",
+    name: "Network Inspector",
+    description: "Look up your public IP address, ISP, and location.",
+    icon: "🌐",
+    path: "/tools/ip-checker/index.html",
+    badge: "05",
+  },
+  {
+    id: "word-search",
+    name: "Word Search Maker",
+    description: "Build custom word search puzzles and export to PDF instantly.",
+    icon: "🔤",
+    path: "/tools/word-search/index.html",
+    badge: "06",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen" style={{ background: "#F5F0FF" }}>
+        {/* Header */}
+        <header className="w-full py-10 flex flex-col items-center" style={{ background: "#F5F0FF" }}>
+          <h1 className="font-black text-4xl tracking-tight mb-2" style={{ color: "#5B21B6" }}>
+            ZenithTools
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-base font-medium" style={{ color: "#7C3AED" }}>
+            Free, instant online utilities — no login required.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </header>
+
+        {/* Tool Grid */}
+        <main className="max-w-5xl mx-auto px-4 pb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tools.map((tool) => (
+              <a
+                key={tool.id}
+                href={tool.path}
+                className="flex flex-col bg-white rounded-3xl overflow-hidden no-underline"
+                style={{ border: "1.5px solid #EDE9FE" }}
+              >
+                <div
+                  className="flex items-center justify-center py-6"
+                  style={{ background: "#EDE9FE" }}
+                >
+                  <span className="text-5xl">{tool.icon}</span>
+                </div>
+                <div className="flex flex-col flex-grow px-7 py-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="font-black text-xl" style={{ color: "#1C1C1C" }}>
+                      {tool.name}
+                    </h2>
+                    <span
+                      className="text-xs font-bold px-2 py-1 rounded-full"
+                      style={{ background: "#EDE9FE", color: "#7C3AED" }}
+                    >
+                      {tool.badge}
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium" style={{ color: "#6B7280" }}>
+                    {tool.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="w-full py-8 flex flex-col items-center gap-2" style={{ background: "#F5F0FF" }}>
+          <p className="text-sm" style={{ color: "#7C3AED" }}>
+            © 2026 ZenithTools
+          </p>
+          <div className="flex gap-4 text-sm">
+            <a href="/legal/privacy" style={{ color: "#7C3AED" }}>Privacy</a>
+            <a href="/legal/terms" style={{ color: "#7C3AED" }}>Terms</a>
+            <a href="/legal/cookies" style={{ color: "#7C3AED" }}>Cookies</a>
+          </div>
+        </footer>
+      </div>
+    </>
   );
 }
