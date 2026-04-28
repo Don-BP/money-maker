@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description: "ZenithTools Cookie Policy — how we use essential, analytics, and advertising cookies including Google AdSense DoubleClick.",
-  alternates: { canonical: "https://zenithtools.vercel.app/legal/cookies" },
+  description: "DokiDokiTools Cookie Policy 窶・how we use essential, analytics, and advertising cookies including Google AdSense DoubleClick.",
+  alternates: { canonical: "https://dokidokitools.vercel.app/legal/cookies" },
 };
 
 const cookieTable = [
   { name: "zt_consent",    type: "Essential",   purpose: "Stores your cookie consent preference",                        duration: "1 year"    },
-  { name: "_ga, _gid",    type: "Analytics",   purpose: "Google Analytics — aggregated traffic (no personal data)",     duration: "2yr / 1day"},
-  { name: "__gads, IDE",  type: "Advertising", purpose: "Google AdSense / DoubleClick — relevant ad serving",           duration: "13 months" },
+  { name: "_ga, _gid",    type: "Analytics",   purpose: "Google Analytics 窶・aggregated traffic (no personal data)",     duration: "2yr / 1day"},
+  { name: "__gads, IDE",  type: "Advertising", purpose: "Google AdSense / DoubleClick 窶・relevant ad serving",           duration: "13 months" },
   { name: "_gac_*",       type: "Advertising", purpose: "Google Ads conversion tracking",                               duration: "90 days"   },
   { name: "DSID, FLC",    type: "Advertising", purpose: "Google DoubleClick cross-site ad targeting",                   duration: "2 weeks"   },
 ];
@@ -67,7 +67,7 @@ export default function CookiesPage() {
             <h2 className="font-black text-lg" style={{ color: "#3B0764" }}>What Are Cookies?</h2>
           </div>
           <p className="leading-relaxed font-medium text-sm" style={{ color: "#9B80C0" }}>
-            Cookies are small text files placed on your device by websites you visit. ZenithTools uses cookies to keep our free tools running and to serve the advertisements that support them.
+            Cookies are small text files placed on your device by websites you visit. DokiDokiTools uses cookies to keep our free tools running and to serve the advertisements that support them.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function CookiesPage() {
             <h2 className="font-black text-lg" style={{ color: "#3B0764" }}>Google AdSense & DoubleClick</h2>
           </div>
           <p className="leading-relaxed font-medium text-sm mb-3" style={{ color: "#9B80C0" }}>
-            ZenithTools uses Google AdSense. Google uses DoubleClick cookies to serve ads based on your visits to our site and other sites (interest-based advertising).
+            DokiDokiTools uses Google AdSense. Google uses DoubleClick cookies to serve ads based on your visits to our site and other sites (interest-based advertising).
           </p>
           <ul className="space-y-1.5 text-sm font-medium" style={{ color: "#9B80C0" }}>
             {[
@@ -153,7 +153,7 @@ export default function CookiesPage() {
           </div>
           <p className="text-sm font-medium" style={{ color: "#9B80C0" }}>
             Questions about our cookie practices? Email{" "}
-            <a href="mailto:privacy@zenithtools.com" className="underline font-bold" style={{ color: "#6B21A8" }}>privacy@zenithtools.com</a>.
+            <a href="mailto:privacy@DokiDokiTools.com" className="underline font-bold" style={{ color: "#6B21A8" }}>privacy@DokiDokiTools.com</a>.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function CookiesPage() {
 
       <footer style={NAV_STYLE} className="mt-8">
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-white/30 font-semibold text-sm">&copy; 2026 ZenithTools. All rights reserved.</span>
+          <span className="text-white/30 font-semibold text-sm">&copy; 2026 DokiDokiTools. All rights reserved.</span>
           <div className="flex gap-8 text-sm font-semibold text-white/30">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <Link href="/legal/privacy" className="hover:text-white transition-colors">Privacy</Link>

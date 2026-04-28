@@ -1,15 +1,15 @@
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "ZenithTools — Free Online Utilities",
-  "url": "https://zenithtools.vercel.app",
+  "name": "DokiDokiTools — Free Online Utilities",
+  "url": "https://dokidokitools.vercel.app",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Username Generator", "url": "https://zenithtools.vercel.app/tools/username-generator/index.html" },
-    { "@type": "ListItem", "position": 2, "name": "Word Finder", "url": "https://zenithtools.vercel.app/tools/word-finder/index.html" },
-    { "@type": "ListItem", "position": 3, "name": "Recipe Scaler", "url": "https://zenithtools.vercel.app/tools/recipe-scaler/index.html" },
-    { "@type": "ListItem", "position": 4, "name": "Romaji to Kana", "url": "https://zenithtools.vercel.app/tools/romaji-to-kana/index.html" },
-    { "@type": "ListItem", "position": 5, "name": "Network Inspector", "url": "https://zenithtools.vercel.app/tools/ip-checker/index.html" },
-    { "@type": "ListItem", "position": 6, "name": "Word Search Maker", "url": "https://zenithtools.vercel.app/tools/word-search/index.html" }
+    { "@type": "ListItem", "position": 1, "name": "Username Generator", "url": "https://dokidokitools.vercel.app/tools/username-generator/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Word Finder", "url": "https://dokidokitools.vercel.app/tools/word-finder/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Recipe Scaler", "url": "https://dokidokitools.vercel.app/tools/recipe-scaler/index.html" },
+    { "@type": "ListItem", "position": 4, "name": "Romaji to Kana", "url": "https://dokidokitools.vercel.app/tools/romaji-to-kana/index.html" },
+    { "@type": "ListItem", "position": 5, "name": "Network Inspector", "url": "https://dokidokitools.vercel.app/tools/ip-checker/index.html" },
+    { "@type": "ListItem", "position": 6, "name": "Word Search Maker", "url": "https://dokidokitools.vercel.app/tools/word-search/index.html" }
   ]
 };
 
@@ -81,7 +81,7 @@ export default function Home() {
         <nav style={{ background: "#6B21A8", boxShadow: "0 4px 0 0 #4C1272" }} className="w-full h-16 flex items-center px-6 z-20">
           <div className="w-full max-w-5xl mx-auto flex items-center justify-between">
             <span className="text-2xl font-black tracking-tight" style={{ color: "#fff" }}>
-              Zenith<span style={{ color: "#FF9800" }}>Tools</span>
+              DokiDoki<span style={{ color: "#FF9800" }}>Tools</span>
             </span>
             <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C4B5FD" }}>
               Free Utilities
@@ -128,13 +128,13 @@ export default function Home() {
               className="inline-block text-white text-4xl md:text-5xl font-black py-3 px-8 rounded-2xl mb-5 tracking-tight"
               style={{ background: "rgba(255,255,255,0.12)", border: "2px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
             >
-              ZenithTools
+              DokiDokiTools
             </div>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
               Free, instant online utilities
             </p>
             <p className="text-sm font-medium" style={{ color: "#C4B5FD" }}>
-              No login. No ads. Works in your browser.
+              No login. Works in your browser.
             </p>
             <div className="flex gap-3 mt-6">
               <span className="text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full" style={{ background: "#FF9800", color: "#fff" }}>
@@ -212,12 +212,12 @@ export default function Home() {
         {/* Footer */}
         <footer className="w-full py-10 flex flex-col items-center gap-3" style={{ background: "#1E0A3C" }}>
           <span className="text-base font-black" style={{ color: "#fff" }}>
-            Zenith<span style={{ color: "#FF9800" }}>Tools</span>
+            DokiDoki<span style={{ color: "#FF9800" }}>Tools</span>
           </span>
           <p className="text-xs font-medium" style={{ color: "#A78BFA" }}>
-            © 2026 ZenithTools — Free online utilities
+            © 2026 DokiDokiTools — Free online utilities
           </p>
-          <div className="flex gap-6 text-xs font-bold" style={{ color: "#C4B5FD" }}>
+          <div className="flex gap-6 text-xs font-bold">
             <a href="/legal/privacy" style={{ color: "#C4B5FD" }}>Privacy</a>
             <a href="/legal/terms" style={{ color: "#C4B5FD" }}>Terms</a>
             <a href="/legal/cookies" style={{ color: "#C4B5FD" }}>Cookies</a>

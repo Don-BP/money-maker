@@ -1,7 +1,7 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const SITE_URL = "https://zenithtools.vercel.app";
+  const SITE_URL = "https://dokidokitools.vercel.app";
   const lastMod = new Date("2026-04-28");
 
   return [

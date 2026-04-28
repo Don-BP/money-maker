@@ -1,0 +1,28 @@
+{
+  "entity_name": "EXA & Firecrawl Agent Integration",
+  "summary": "Setup instructions and usage patterns for equipping Claude Code or Codex with EXA for semantic web search and Firecrawl for deep web scraping. This combination eliminates LLM hallucination by injecting real-time, accurate context from the web.",
+  "actors": [
+    "AI Agent (Claude Code / Codex)",
+    "Developer"
+  ],
+  "processes": [
+    {
+      "name": "Research Workflow",
+      "tools_used": [
+        "EXA MCP Server",
+        "Firecrawl CLI",
+        "Bash"
+      ],
+      "frequency": "As needed during coding tasks",
+      "pain_points": [
+        "Agents hallucinate APIs and use outdated patterns when coding from memory.",
+        "MCP context bloat (Firecrawl moved to CLI to prevent flooding agent context)."
+      ],
+      "proposed_changes": "Use EXA to find the right sources (via HTTP MCP) and Firecrawl CLI to scrape the full content (via Bash commands) to ensure accurate, zero-hallucination code generation."
+    }
+  ],
+  "tools": [
+    "EXA (web_search_exa, get_code_context_exa, company_research_exa)",
+    "Firecrawl CLI (firecrawl scrape, firecrawl search, firecrawl agent, firecrawl browser)"
+  ]
+}

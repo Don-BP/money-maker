@@ -1,0 +1,34 @@
+{
+  "entity_name": "ZenithTools Utility Apps Portfolio (PDR v2)",
+  "summary": "Project Design Requirements to build a portfolio of 5 lightweight, single-purpose utility web apps (Romaji Converter, RPG Optimizer, DoF Calculator, Recipe Scaler, Cron Generator). The goal is to drive compound traffic through low-competition evergreen search queries and monetize via AdSense RPM.",
+  "actors": [
+    "Developer (Senior Front-End Engineer & SEO Utility Specialist)",
+    "Users (Gamers, Photographers, Cooks, Devs, Language Learners)"
+  ],
+  "processes": [
+    {
+      "name": "Utility App Development",
+      "tools_used": [
+        "Vanilla HTML5",
+        "Vanilla CSS (Flexbox/Grid)",
+        "Vanilla JavaScript (ES6+)",
+        "Vercel (Static Hosting)",
+        "Google AdSense"
+      ],
+      "frequency": "One-time build per app",
+      "pain_points": [
+        "Layout shifts from ads (requires fixed heights)",
+        "Complex logic requiring backend (must be 100% client-side)",
+        "Slow load times (must be sub-1-second, no CDNs/libraries)"
+      ],
+      "proposed_changes": "Implement 'Advanced Options' panels for all apps, ensuring instant real-time updates without page reloads to improve user engagement and utility."
+    }
+  ],
+  "tools": [
+    "Romaji to Kana Converter",
+    "RPG Character Stat Optimizer",
+    "Depth of Field Calculator",
+    "Recipe Servings Scaler",
+    "Cron Schedule Generator"
+  ]
+}

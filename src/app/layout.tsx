@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter, Outfit, Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 
@@ -24,16 +24,16 @@ const nunito = Nunito({
   weight: ["700", "900"],
 });
 
-const SITE_URL = "https://zenithtools.vercel.app";
+const SITE_URL = "https://dokidokitools.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ZenithTools — Free Online Utility Tools",
-    template: "%s | ZenithTools",
+    default: "DokiDokiTools — Free Online Utility Tools",
+    template: "%s | DokiDokiTools",
   },
   description:
-    "ZenithTools offers free, fast, browser-based utility tools for gamers, writers, cooks, and developers. No account needed. Works instantly.",
+    "DokiDokiTools offers free, fast, browser-based utility tools for gamers, writers, cooks, and developers. No account needed. Works instantly.",
   keywords: [
     "free online tools",
     "utility tools",
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
     "synonym finder",
     "ip address checker",
     "username generator",
-    "zenithtools",
+    "DokiDokiTools",
   ],
-  authors: [{ name: "ZenithTools" }],
-  creator: "ZenithTools",
-  publisher: "ZenithTools",
+  authors: [{ name: "DokiDokiTools" }],
+  creator: "DokiDokiTools",
+  publisher: "DokiDokiTools",
   robots: {
     index: true,
     follow: true,
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    siteName: "ZenithTools",
-    title: "ZenithTools — Free Online Utility Tools",
+    siteName: "DokiDokiTools",
+    title: "DokiDokiTools —Free Online Utility Tools",
     description:
       "Free, fast, browser-based utility tools for gamers, writers, cooks, and developers. No account needed.",
     images: [
@@ -74,13 +74,13 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "ZenithTools — Free Online Utility Tools",
+        alt: "DokiDokiTools —Free Online Utility Tools",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZenithTools — Free Online Utility Tools",
+    title: "DokiDokiTools —Free Online Utility Tools",
     description:
       "Free, fast, browser-based utility tools for gamers, writers, cooks, and developers.",
     images: [`${SITE_URL}/og-image.png`],

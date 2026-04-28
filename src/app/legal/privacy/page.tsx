@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "ZenithTools Privacy Policy — how we handle your data, cookies, and Google AdSense advertising. GDPR and CCPA compliant.",
-  alternates: { canonical: "https://zenithtools.vercel.app/legal/privacy" },
+  description: "DokiDokiTools Privacy Policy 窶・how we handle your data, cookies, and Google AdSense advertising. GDPR and CCPA compliant.",
+  alternates: { canonical: "https://dokidokitools.vercel.app/legal/privacy" },
   openGraph: {
-    title: "Privacy Policy | ZenithTools",
-    description: "ZenithTools is privacy-first. Read how we handle data, cookies, and advertising.",
-    url: "https://zenithtools.vercel.app/legal/privacy",
+    title: "Privacy Policy | DokiDokiTools",
+    description: "DokiDokiTools is privacy-first. Read how we handle data, cookies, and advertising.",
+    url: "https://dokidokitools.vercel.app/legal/privacy",
     type: "website",
   },
 };
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "1. Who We Are",
-    content: `ZenithTools ("we", "us", "our") operates zenithtools.vercel.app — a collection of free browser-based utility tools. Contact us at privacy@zenithtools.com.`,
+    content: `DokiDokiTools ("we", "us", "our") operates dokidokitools.vercel.app 窶・a collection of free browser-based utility tools. Contact us at privacy@DokiDokiTools.com.`,
   },
   {
     title: "2. Information We Collect",
@@ -38,29 +38,29 @@ const sections = [
   },
   {
     title: "4. Google AdSense",
-    content: "ZenithTools uses Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on prior visits to our and other sites. We comply with all Google AdSense Program Policies.",
+    content: "DokiDokiTools uses Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on prior visits to our and other sites. We comply with all Google AdSense Program Policies.",
   },
   {
     title: "5. Third-Party Services",
     bullets: [
-      "Vercel — Hosting (vercel.com/legal/privacy-policy)",
-      "Google Fonts — Typography, no personal data collected",
-      "Google AdSense — Advertising platform",
-      "ipapi.co — Used by Network Inspector to resolve IP data",
+      "Vercel 窶・Hosting (vercel.com/legal/privacy-policy)",
+      "Google Fonts 窶・Typography, no personal data collected",
+      "Google AdSense 窶・Advertising platform",
+      "ipapi.co 窶・Used by Network Inspector to resolve IP data",
     ],
   },
   {
     title: "6. Your Rights (GDPR & CCPA)",
     bullets: [
       "Right to Access: Request any personal data we hold (we hold virtually none).",
-      "Right to Erasure: Request deletion — trivially satisfied given our data-minimal approach.",
+      "Right to Erasure: Request deletion 窶・trivially satisfied given our data-minimal approach.",
       "Right to Object: Withdraw ad consent anytime via the cookie banner.",
       "CCPA: We do not sell personal information.",
     ],
   },
   {
     title: "7. Children's Privacy",
-    content: "ZenithTools does not knowingly collect data from children under 13 (or 16 in the EU). Contact privacy@zenithtools.com if you believe a child has submitted personal information.",
+    content: "DokiDokiTools does not knowingly collect data from children under 13 (or 16 in the EU). Contact privacy@DokiDokiTools.com if you believe a child has submitted personal information.",
   },
   {
     title: "8. Changes to This Policy",
@@ -68,7 +68,7 @@ const sections = [
   },
   {
     title: "9. Contact",
-    content: "Questions? Email privacy@zenithtools.com. We aim to respond within 30 days.",
+    content: "Questions? Email privacy@DokiDokiTools.com. We aim to respond within 30 days.",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function PrivacyPage() {
 
       <footer style={NAV_STYLE} className="mt-8">
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-white/30 font-semibold text-sm">&copy; 2026 ZenithTools. All rights reserved.</span>
+          <span className="text-white/30 font-semibold text-sm">&copy; 2026 DokiDokiTools. All rights reserved.</span>
           <div className="flex gap-8 text-sm font-semibold text-white/30">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <Link href="/legal/terms" className="hover:text-white transition-colors">Terms</Link>

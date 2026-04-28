@@ -1,0 +1,29 @@
+{
+  "entity_name": "Passive Income via Boring Utility Sites (Transcript)",
+  "summary": "A transcript of a video explaining how 'boring' utility websites (e.g., word unscramblers, sleep calculators, IP address checkers) generate massive passive income (up to $825k/month) through high-volume, low-competition traffic monetized via Google AdSense. The creator cloned a profitable unscrambler site in 15 minutes using AI without writing code.",
+  "actors": [
+    "Video Creator",
+    "Website Users"
+  ],
+  "processes": [
+    {
+      "name": "Utility Site Creation & Monetization",
+      "tools_used": [
+        "AI Coding Agents",
+        "Google AdSense",
+        "Static Hosting"
+      ],
+      "frequency": "One-time build per tool",
+      "pain_points": [
+        "People mistakenly think they need a big brand, products, or social media following to make money online."
+      ],
+      "proposed_changes": "Focus on building simple, single-purpose utility tools that solve immediate user problems and rank for evergreen search terms, then monetize with display ads."
+    }
+  ],
+  "tools": [
+    "Word Unscrambler",
+    "Sleep Calculator",
+    "IP Address Tool",
+    "Calculator.net"
+  ]
+}

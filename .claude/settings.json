@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_context-mode_context-mode__ctx_execute_file",
+      "mcp__plugin_context-mode_context-mode__ctx_search",
+      "Bash(ls -d .worktrees)",
+      "Bash(ls -d worktrees)",
+      "Bash(grep -i \"worktree.*director\" CLAUDE.md)",
+      "Bash(git check-ignore *)",
+      "Skill(firecrawl-search)",
+      "Skill(firecrawl-search:*)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "Bash(npm run *)",
+      "mcp__plugin_context-mode_context-mode__ctx_execute",
+      "Bash(git remote *)",
+      "Bash(git merge *)",
+      "Bash(git checkout *)",
+      "Bash(git push *)"
+    ]
+  }
+}

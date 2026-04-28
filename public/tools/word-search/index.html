@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word Search Maker Free — Printable PDF | ZenithTools</title>
+  <title>Word Search Maker Free 窶・Printable PDF | DokiDokiTools</title>
   <meta name="description" content="Create custom word search puzzles instantly. Add your own words, choose grid size and directions, then print or export to PDF for free. No login required.">
-  <link rel="canonical" href="https://zenithtools.vercel.app/tools/word-search/index.html">
+  <link rel="canonical" href="https://dokidokitools.vercel.app/tools/word-search/index.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zenithtools.vercel.app/tools/word-search/index.html">
-  <meta property="og:title" content="Word Search Maker Free — Printable PDF | ZenithTools">
+  <meta property="og:url" content="https://dokidokitools.vercel.app/tools/word-search/index.html">
+  <meta property="og:title" content="Word Search Maker Free 窶・Printable PDF | DokiDokiTools">
   <meta property="og:description" content="Build printable word search puzzles with your own words. Choose grid size, directions, and export to PDF. Free, no login.">
-  <meta property="og:site_name" content="ZenithTools">
+  <meta property="og:site_name" content="DokiDokiTools">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Word Search Maker Free | ZenithTools">
+  <meta name="twitter:title" content="Word Search Maker Free | DokiDokiTools">
   <meta name="twitter:description" content="Create custom word search puzzles and export to PDF. Free, instant, no login.">
   <script type="application/ld+json">
   {
@@ -21,12 +21,12 @@
       {
         "@type": "WebApplication",
         "name": "Word Search Maker",
-        "url": "https://zenithtools.vercel.app/tools/word-search/index.html",
+        "url": "https://dokidokitools.vercel.app/tools/word-search/index.html",
         "description": "Create custom printable word search puzzles. Add your own words, configure grid size and directions, export to PDF.",
         "applicationCategory": "UtilityApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "creator": { "@type": "Organization", "name": "ZenithTools", "url": "https://zenithtools.vercel.app" }
+        "creator": { "@type": "Organization", "name": "DokiDokiTools", "url": "https://dokidokitools.vercel.app" }
       },
       {
         "@type": "FAQPage",
@@ -262,11 +262,11 @@
 <body>
   <nav class="nav">
     <a href="/" class="nav-brand">Zenith<span>Tools</span></a>
-    <a href="/" class="nav-back">← All Tools</a>
+    <a href="/" class="nav-back">竊・All Tools</a>
   </nav>
 
   <div class="hero">
-    <h1>🔤 Word Search <span>Maker</span></h1>
+    <h1>筈 Word Search <span>Maker</span></h1>
     <p>Create printable word searches in seconds. Export to PDF.</p>
   </div>
 
@@ -275,7 +275,7 @@
       <!-- Left: controls -->
       <div class="controls-col">
         <div class="panel">
-          <h2>📝 Add Words</h2>
+          <h2>統 Add Words</h2>
           <div class="input-row">
             <input type="text" id="word-input" placeholder="Type a word..." autocomplete="off">
             <button class="btn-add" id="add-btn" onclick="addWord()" aria-label="Add word">+</button>
@@ -284,12 +284,12 @@
         </div>
 
         <div class="panel">
-          <h2>⚙️ Options</h2>
+          <h2>笞呻ｸ・Options</h2>
           <div class="options-grid">
-            <label class="toggle-label"><input type="checkbox" id="opt-horizontal" checked> Horizontal →</label>
-            <label class="toggle-label"><input type="checkbox" id="opt-vertical" checked> Vertical ↓</label>
-            <label class="toggle-label"><input type="checkbox" id="opt-diagonal" checked> Diagonal ↘</label>
-            <label class="toggle-label"><input type="checkbox" id="opt-backward" checked> Backward ←↑</label>
+            <label class="toggle-label"><input type="checkbox" id="opt-horizontal" checked> Horizontal 竊・/label>
+            <label class="toggle-label"><input type="checkbox" id="opt-vertical" checked> Vertical 竊・/label>
+            <label class="toggle-label"><input type="checkbox" id="opt-diagonal" checked> Diagonal 竊・/label>
+            <label class="toggle-label"><input type="checkbox" id="opt-backward" checked> Backward 竊絶・</label>
           </div>
           <div class="size-row">
             <label>Rows <input type="number" id="opt-rows" value="10" min="5" max="20"></label>
@@ -298,8 +298,8 @@
         </div>
 
         <div class="actions">
-          <button class="btn-primary" onclick="generatePuzzle()">✨ Generate!</button>
-          <button class="btn-secondary" onclick="exportPDF()" id="export-btn" disabled>📄 Export PDF</button>
+          <button class="btn-primary" onclick="generatePuzzle()">笨ｨ Generate!</button>
+          <button class="btn-secondary" onclick="exportPDF()" id="export-btn" disabled>塘 Export PDF</button>
         </div>
 
         <div class="error-msg" id="error-msg"></div>
@@ -308,7 +308,7 @@
       <!-- Right: puzzle display -->
       <div class="puzzle-panel">
         <div id="puzzle-container">
-          <div class="empty-state">Add words and click Generate! ✨</div>
+          <div class="empty-state">Add words and click Generate! 笨ｨ</div>
         </div>
         <div id="words-to-find"></div>
       </div>
@@ -316,7 +316,7 @@
   </main>
 
   <footer>
-    <span>&copy; 2026 ZenithTools &bull;
+    <span>&copy; 2026 DokiDokiTools &bull;
       <a href="/legal/privacy">Privacy</a>
       <a href="/legal/terms">Terms</a>
     </span>
@@ -347,7 +347,7 @@
     function renderWordChips() {
       const container = document.getElementById('word-chips');
       container.innerHTML = words.map((w, i) =>
-        `<span class="chip">${w}<button class="chip-remove" onclick="removeWord(${i})" aria-label="Remove ${w}">×</button></span>`
+        `<span class="chip">${w}<button class="chip-remove" onclick="removeWord(${i})" aria-label="Remove ${w}">ﾃ・/button></span>`
       ).join('');
     }
 
