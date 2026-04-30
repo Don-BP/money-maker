@@ -1,6 +1,9 @@
 ﻿import type { Metadata } from "next";
 import { Inter, Outfit, Fredoka, Nunito } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_ID = "G-PE5HREPN47";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -101,6 +104,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} ${fredoka.variable} ${nunito.variable} font-sans min-h-full flex flex-col bg-slate-950 text-slate-50 antialiased`}
       >
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}');
+        `}</Script>
         {children}
       </body>
     </html>
