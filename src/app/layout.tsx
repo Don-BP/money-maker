@@ -104,6 +104,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} ${fredoka.variable} ${nunito.variable} font-sans min-h-full flex flex-col bg-slate-950 text-slate-50 antialiased`}
       >
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9095999965852539" crossOrigin="anonymous" strategy="afterInteractive" />
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
