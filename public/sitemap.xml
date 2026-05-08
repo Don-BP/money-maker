@@ -2,68 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage -->
   <url>
-    <loc>https://zenithtools.vercel.app/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Tool Pages (static HTML served from /public) -->
   <url>
-    <loc>https://zenithtools.vercel.app/tools/romaji-to-kana/index.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/tools/username-generator/index.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://zenithtools.vercel.app/tools/recipe-scaler/index.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/tools/word-finder/index.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://zenithtools.vercel.app/tools/word-finder/index.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/tools/recipe-scaler/index.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://zenithtools.vercel.app/tools/username-generator/index.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/tools/romaji-to-kana/index.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://zenithtools.vercel.app/tools/ip-checker/index.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/tools/ip-checker/index.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Legal Pages -->
   <url>
-    <loc>https://zenithtools.vercel.app/legal/privacy</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/tools/word-search/index.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dokidokitools.vercel.app/legal/privacy</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://zenithtools.vercel.app/legal/terms</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/legal/terms</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://zenithtools.vercel.app/legal/cookies</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://dokidokitools.vercel.app/legal/cookies</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
