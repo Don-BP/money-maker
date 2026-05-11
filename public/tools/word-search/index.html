@@ -270,11 +270,11 @@
 <body>
   <nav class="nav">
     <a href="/" class="nav-brand">DokiDoki<span>Tools</span></a>
-    <a href="/" class="nav-back">竊・All Tools</a>
+    <a href="/" class="nav-back">&larr; All Tools</a>
   </nav>
 
   <div class="hero">
-    <h1>筈 Word Search <span>Maker</span></h1>
+    <h1>Word Search <span>Maker</span></h1>
     <p>Create printable word searches in seconds. Export to PDF.</p>
   </div>
 
@@ -283,7 +283,7 @@
       <!-- Left: controls -->
       <div class="controls-col">
         <div class="panel">
-          <h2>統 Add Words</h2>
+          <h2>Add Words</h2>
           <div class="input-row">
             <input type="text" id="word-input" placeholder="Type a word..." autocomplete="off">
             <button class="btn-add" id="add-btn" onclick="addWord()" aria-label="Add word">+</button>
@@ -292,12 +292,12 @@
         </div>
 
         <div class="panel">
-          <h2>笞呻ｸ・Options</h2>
+          <h2>Options</h2>
           <div class="options-grid">
-            <label class="toggle-label"><input type="checkbox" id="opt-horizontal" checked> Horizontal 竊・/label>
-            <label class="toggle-label"><input type="checkbox" id="opt-vertical" checked> Vertical 竊・/label>
-            <label class="toggle-label"><input type="checkbox" id="opt-diagonal" checked> Diagonal 竊・/label>
-            <label class="toggle-label"><input type="checkbox" id="opt-backward" checked> Backward 竊絶・</label>
+            <label class="toggle-label"><input type="checkbox" id="opt-horizontal" checked> Horizontal</label>
+            <label class="toggle-label"><input type="checkbox" id="opt-vertical" checked> Vertical</label>
+            <label class="toggle-label"><input type="checkbox" id="opt-diagonal" checked> Diagonal</label>
+            <label class="toggle-label"><input type="checkbox" id="opt-backward" checked> Backward</label>
           </div>
           <div class="size-row">
             <label>Rows <input type="number" id="opt-rows" value="10" min="5" max="20"></label>
@@ -306,8 +306,8 @@
         </div>
 
         <div class="actions">
-          <button class="btn-primary" onclick="generatePuzzle()">笨ｨ Generate!</button>
-          <button class="btn-secondary" onclick="exportPDF()" id="export-btn" disabled>塘 Export PDF</button>
+          <button class="btn-primary" onclick="generatePuzzle()">Generate!</button>
+          <button class="btn-secondary" onclick="exportPDF()" id="export-btn" disabled>Export PDF</button>
         </div>
 
         <div class="error-msg" id="error-msg"></div>
@@ -316,7 +316,7 @@
       <!-- Right: puzzle display -->
       <div class="puzzle-panel">
         <div id="puzzle-container">
-          <div class="empty-state">Add words and click Generate! 笨ｨ</div>
+          <div class="empty-state">Add words and click Generate!</div>
         </div>
         <div id="words-to-find"></div>
       </div>
