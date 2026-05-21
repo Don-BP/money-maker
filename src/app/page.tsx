@@ -97,8 +97,8 @@ export default function Home() {
           100% { filter: drop-shadow(0 0 18px #EF4444cc) drop-shadow(0 4px 36px #EF444440); }
         }
         @keyframes logo-shimmer {
-          0%        { background-position: 110% center; }
-          60%, 100% { background-position: -10% center; }
+          0%        { background-position: 200% center; }
+          40%, 100% { background-position: -100% center; }
         }
         @keyframes logo-wobble {
           0%,100% { transform: rotate(0deg) scale(1); }
