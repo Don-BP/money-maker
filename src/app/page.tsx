@@ -130,7 +130,13 @@ export default function Home() {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.6) 50%, transparent 70%);
+          background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.7) 50%, transparent 70%);
+          -webkit-mask-image: url('/assets/Dokidoki%20tools%20wide%20logo.png');
+          mask-image: url('/assets/Dokidoki%20tools%20wide%20logo.png');
+          -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
           animation: logo-shimmer 4s ease-in-out infinite;
           pointer-events: none;
           z-index: 1;
