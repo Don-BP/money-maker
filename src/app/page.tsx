@@ -97,8 +97,8 @@ export default function Home() {
           100% { filter: drop-shadow(0 0 18px #EF4444cc) drop-shadow(0 4px 36px #EF444440); }
         }
         @keyframes logo-shimmer {
-          0%        { background-position: 200% center; }
-          40%, 100% { background-position: -100% center; }
+          0%        { background-position: 300% center; }
+          40%, 100% { background-position: -200% center; }
         }
         @keyframes logo-wobble {
           0%,100% { transform: rotate(0deg) scale(1); }
@@ -139,7 +139,7 @@ export default function Home() {
           mask-size: 100% 100%;
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-          animation: logo-shimmer 4s ease-in-out infinite;
+          animation: logo-shimmer 4s linear infinite;
           pointer-events: none;
           z-index: 1;
         }
