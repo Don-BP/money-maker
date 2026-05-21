@@ -41,10 +41,22 @@ export const metadata: Metadata = {
     "free online tools",
     "utility tools",
     "romaji to hiragana",
+    "romaji to katakana",
+    "romaji converter",
     "recipe scaler",
+    "recipe multiplier",
+    "recipe converter",
     "synonym finder",
+    "antonym finder",
+    "word search maker",
+    "word search generator",
+    "printable word search",
     "ip address checker",
+    "what is my ip",
+    "ip address lookup",
     "username generator",
+    "random username generator",
+    "gaming username generator",
     "DokiDokiTools",
   ],
   authors: [{ name: "DokiDokiTools" }],
@@ -69,28 +81,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "DokiDokiTools",
-    title: "DokiDokiTools —Free Online Utility Tools",
+    title: "DokiDokiTools — Free Online Utility Tools",
     description:
       "Free, fast, browser-based utility tools for gamers, writers, cooks, and developers. No account needed.",
-    images: [
-      {
-        url: `${SITE_URL}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "DokiDokiTools —Free Online Utility Tools",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DokiDokiTools —Free Online Utility Tools",
+    title: "DokiDokiTools — Free Online Utility Tools",
     description:
       "Free, fast, browser-based utility tools for gamers, writers, cooks, and developers.",
-    images: [`${SITE_URL}/og-image.png`],
-  },
-  // Replace with your actual Google Search Console verification code
-  verification: {
-    google: "REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_CODE",
   },
 };
 
