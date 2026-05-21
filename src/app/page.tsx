@@ -192,9 +192,11 @@ export default function Home() {
           />
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 pb-8 sm:pb-16">
-            <h1 className="logo-hero-wrap mb-5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="logo-hero-img" src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "clamp(60px, 18vw, 110px)", width: "auto", maxWidth: "90vw" }} />
+            <h1 className="mb-5">
+              <span className="logo-hero-wrap">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="logo-hero-img" src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "clamp(60px, 18vw, 110px)", width: "auto", maxWidth: "90vw", display: "block" }} />
+              </span>
             </h1>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
               Free, instant online utilities
