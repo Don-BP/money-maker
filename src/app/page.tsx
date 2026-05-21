@@ -84,6 +84,59 @@ export default function Home() {
       <style>{`
         .tool-card { transition: transform 0.15s, box-shadow 0.15s; }
         .tool-card:hover { transform: translateY(-3px); box-shadow: 0 8px 0 0 #C4B5FD !important; }
+
+        @keyframes logo-float {
+          0%, 100% { transform: translateY(0px); }
+          50%       { transform: translateY(-12px); }
+        }
+        @keyframes logo-glow {
+          0%   { filter: drop-shadow(0 0 18px #EF4444cc) drop-shadow(0 4px 36px #EF444440); }
+          25%  { filter: drop-shadow(0 0 18px #FF9800cc) drop-shadow(0 4px 36px #FF980040); }
+          50%  { filter: drop-shadow(0 0 18px #22C55Ecc) drop-shadow(0 4px 36px #22C55E40); }
+          75%  { filter: drop-shadow(0 0 18px #3B82F6cc) drop-shadow(0 4px 36px #3B82F640); }
+          100% { filter: drop-shadow(0 0 18px #EF4444cc) drop-shadow(0 4px 36px #EF444440); }
+        }
+        @keyframes logo-shimmer {
+          0%        { transform: translateX(-160%); }
+          55%, 100% { transform: translateX(260%); }
+        }
+        @keyframes logo-wobble {
+          0%,100% { transform: rotate(0deg) scale(1); }
+          15%     { transform: rotate(-6deg) scale(1.05); }
+          30%     { transform: rotate(6deg)  scale(1.07); }
+          45%     { transform: rotate(-4deg) scale(1.06); }
+          60%     { transform: rotate(3deg)  scale(1.05); }
+          75%     { transform: rotate(-2deg) scale(1.04); }
+        }
+        @keyframes logo-glow-burst {
+          0%   { filter: drop-shadow(0 0 44px #FF9800ff) drop-shadow(0 0 88px #A855F7cc); }
+          50%  { filter: drop-shadow(0 0 60px #FF9800ff) drop-shadow(0 0 120px #A855F7ee); }
+          100% { filter: drop-shadow(0 0 22px #FF9800bb) drop-shadow(0 0 55px #A855F7bb); }
+        }
+
+        .logo-hero-wrap {
+          display: inline-block;
+          position: relative;
+          animation: logo-float 3s ease-in-out infinite;
+          cursor: pointer;
+        }
+        .logo-hero-wrap::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
+          animation: logo-shimmer 4s ease-in-out infinite;
+          pointer-events: none;
+          z-index: 1;
+          clip-path: inset(0 round 4px);
+        }
+        .logo-hero-img {
+          display: block;
+          animation: logo-glow 5s linear infinite;
+        }
+        .logo-hero-wrap:hover .logo-hero-img {
+          animation: logo-wobble 0.6s ease-out forwards, logo-glow-burst 0.6s ease-out forwards;
+        }
       `}</style>
       <script
         type="application/ld+json"
@@ -139,9 +192,9 @@ export default function Home() {
           />
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 pb-16">
-            <h1 className="mb-5">
+            <h1 className="logo-hero-wrap mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "110px", width: "auto" }} />
+              <img className="logo-hero-img" src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "clamp(60px, 18vw, 110px)", width: "auto", maxWidth: "90vw" }} />
             </h1>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
               Free, instant online utilities
