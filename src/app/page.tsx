@@ -114,27 +114,31 @@ export default function Home() {
           100% { filter: drop-shadow(0 0 22px #FF9800bb) drop-shadow(0 0 55px #A855F7bb); }
         }
 
+        /* outer: carries float + color glow; no clipping so drop-shadow bleeds out */
         .logo-hero-wrap {
           display: inline-block;
-          position: relative;
-          animation: logo-float 3s ease-in-out infinite;
+          animation: logo-float 3s ease-in-out infinite, logo-glow 5s linear infinite;
           cursor: pointer;
         }
-        .logo-hero-wrap::before {
+        /* inner: overflow:hidden clips the shimmer without touching the glow */
+        .logo-shimmer-clip {
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+        }
+        .logo-shimmer-clip::before {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
+          background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.6) 50%, transparent 70%);
           animation: logo-shimmer 4s ease-in-out infinite;
           pointer-events: none;
           z-index: 1;
-          clip-path: inset(0 round 4px);
         }
         .logo-hero-img {
           display: block;
-          animation: logo-glow 5s linear infinite;
         }
-        .logo-hero-wrap:hover .logo-hero-img {
+        .logo-hero-wrap:hover {
           animation: logo-wobble 0.6s ease-out forwards, logo-glow-burst 0.6s ease-out forwards;
         }
       `}</style>
@@ -194,8 +198,10 @@ export default function Home() {
           <div className="relative z-10 flex flex-col items-center text-center px-4 pb-8 sm:pb-16">
             <h1 className="mb-5">
               <span className="logo-hero-wrap">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="logo-hero-img" src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "clamp(60px, 18vw, 110px)", width: "auto", maxWidth: "90vw", display: "block" }} />
+                <span className="logo-shimmer-clip">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img className="logo-hero-img" src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "clamp(60px, 18vw, 110px)", width: "auto", maxWidth: "90vw", display: "block" }} />
+                </span>
               </span>
             </h1>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
