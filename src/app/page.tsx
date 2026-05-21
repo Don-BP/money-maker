@@ -94,10 +94,9 @@ export default function Home() {
         {/* Nav */}
         <nav style={{ background: "#6B21A8", boxShadow: "0 4px 0 0 #4C1272" }} className="w-full h-16 flex items-center px-6 z-20">
           <div className="w-full max-w-5xl mx-auto flex items-center justify-between">
-            <span className="flex items-center gap-2 text-2xl font-black tracking-tight" style={{ color: "#fff" }}>
+            <span className="flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/dokidokitools_logo.png" alt="" style={{ height: "36px", width: "auto" }} />
-              DokiDoki<span style={{ color: "#FF9800" }}>Tools</span>
+              <img src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "40px", width: "auto" }} />
             </span>
             <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C4B5FD" }}>
               Free Utilities
@@ -140,13 +139,9 @@ export default function Home() {
           />
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 pb-16">
-            <h1
-              className="inline-flex items-center gap-3 text-white text-4xl md:text-5xl font-black py-3 px-8 rounded-2xl mb-5 tracking-tight"
-              style={{ background: "rgba(255,255,255,0.12)", border: "2px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
-            >
+            <h1 className="mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/dokidokitools_logo.png" alt="" style={{ height: "48px", width: "auto" }} />
-              DokiDokiTools
+              <img src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "110px", width: "auto" }} />
             </h1>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
               Free, instant online utilities
