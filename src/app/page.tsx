@@ -97,8 +97,8 @@ export default function Home() {
           100% { filter: drop-shadow(0 0 18px #EF4444cc) drop-shadow(0 4px 36px #EF444440); }
         }
         @keyframes logo-shimmer {
-          0%        { transform: translateX(-160%); }
-          55%, 100% { transform: translateX(260%); }
+          0%        { background-position: -100% center; }
+          60%, 100% { background-position: 200% center; }
         }
         @keyframes logo-wobble {
           0%,100% { transform: rotate(0deg) scale(1); }
@@ -131,6 +131,8 @@ export default function Home() {
           position: absolute;
           inset: 0;
           background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.7) 50%, transparent 70%);
+          background-size: 200% 100%;
+          background-position: -100% center;
           -webkit-mask-image: url('/assets/Dokidoki%20tools%20wide%20logo.png');
           mask-image: url('/assets/Dokidoki%20tools%20wide%20logo.png');
           -webkit-mask-size: 100% 100%;
