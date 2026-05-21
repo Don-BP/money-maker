@@ -209,6 +209,67 @@ export default function Home() {
           </div>
         </main>
 
+        {/* About / Content Section */}
+        <section className="w-full max-w-5xl mx-auto px-4 pb-20">
+          <div className="rounded-3xl p-8 md:p-12" style={{ background: "#fff", border: "1.5px solid #DDD6FE" }}>
+            <h2 className="font-black text-2xl mb-4" style={{ color: "#6B21A8" }}>What is DokiDokiTools?</h2>
+            <p className="text-base mb-4" style={{ color: "#4B5563" }}>
+              DokiDokiTools is a collection of free, browser-based utility tools designed to help with everyday tasks — no account, no download, no cost. Every tool runs entirely in your browser, meaning your data never leaves your device.
+            </p>
+            <p className="text-base mb-8" style={{ color: "#4B5563" }}>
+              Whether you are a student, writer, gamer, cook, or developer, DokiDokiTools has something for you. Our tools are fast, mobile-friendly, and built to work without any technical knowledge required.
+            </p>
+
+            <h2 className="font-black text-2xl mb-4" style={{ color: "#6B21A8" }}>Our Free Tools</h2>
+            <div className="space-y-4 mb-8">
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Username Generator</h3>
+                <p style={{ color: "#4B5563" }}>Generate unique, creative usernames for gaming, social media, or any online platform. Choose from gaming, fantasy, or minimal styles. Perfect for Steam, Discord, Reddit, and more.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Word Finder (Synonym &amp; Antonym Finder)</h3>
+                <p style={{ color: "#4B5563" }}>Find synonyms, antonyms, and rhyming words instantly. Great for writers, students, poets, crossword solvers, and anyone who wants to expand their vocabulary or avoid repetition in writing.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Recipe Scaler</h3>
+                <p style={{ color: "#4B5563" }}>Scale any recipe up or down to feed any number of people. Double a recipe for a party, halve it for a single serving, or triple it for a crowd. Supports US Imperial and Metric unit conversions.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Romaji to Kana Converter</h3>
+                <p style={{ color: "#4B5563" }}>Convert English Romaji text to Japanese Hiragana and Katakana instantly. Ideal for Japanese learners, anime fans, or anyone who needs to write Japanese phonetics without a Japanese keyboard.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Network Inspector (IP Address Checker)</h3>
+                <p style={{ color: "#4B5563" }}>Instantly look up your public IP address, Internet Service Provider (ISP), and approximate location. Useful for troubleshooting network issues, checking if your VPN is working, or verifying your online identity.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Word Search Maker</h3>
+                <p style={{ color: "#4B5563" }}>Build custom word search puzzles with your own words and export them to PDF for printing. Perfect for teachers, parents, classrooms, birthday parties, and family game nights.</p>
+              </div>
+            </div>
+
+            <h2 className="font-black text-2xl mb-4" style={{ color: "#6B21A8" }}>Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Are all the tools really free?</h3>
+                <p style={{ color: "#4B5563" }}>Yes. Every tool on DokiDokiTools is 100% free to use with no hidden fees, subscriptions, or premium tiers. No account or login is ever required.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Do the tools work on mobile?</h3>
+                <p style={{ color: "#4B5563" }}>Yes, all tools are fully responsive and work on smartphones and tablets. They are designed to work smoothly on any screen size without needing an app.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Is my data private?</h3>
+                <p style={{ color: "#4B5563" }}>All tools run entirely in your browser. Text you type, recipes you enter, and words you search are never sent to or stored on any server. Your data stays on your device.</p>
+              </div>
+              <div>
+                <h3 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>Do I need to install anything?</h3>
+                <p style={{ color: "#4B5563" }}>No installation required. Open any tool in your browser and start using it immediately. Works on Chrome, Firefox, Safari, and Edge.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="w-full py-10 flex flex-col items-center gap-3" style={{ background: "#1E0A3C" }}>
           <span className="text-base font-black" style={{ color: "#fff" }}>
