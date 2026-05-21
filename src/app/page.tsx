@@ -94,7 +94,9 @@ export default function Home() {
         {/* Nav */}
         <nav style={{ background: "#6B21A8", boxShadow: "0 4px 0 0 #4C1272" }} className="w-full h-16 flex items-center px-6 z-20">
           <div className="w-full max-w-5xl mx-auto flex items-center justify-between">
-            <span className="text-2xl font-black tracking-tight" style={{ color: "#fff" }}>
+            <span className="flex items-center gap-2 text-2xl font-black tracking-tight" style={{ color: "#fff" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/assets/dokidokitools_logo.png" alt="" style={{ height: "36px", width: "auto" }} />
               DokiDoki<span style={{ color: "#FF9800" }}>Tools</span>
             </span>
             <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C4B5FD" }}>
@@ -139,9 +141,11 @@ export default function Home() {
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 pb-16">
             <h1
-              className="inline-block text-white text-4xl md:text-5xl font-black py-3 px-8 rounded-2xl mb-5 tracking-tight"
+              className="inline-flex items-center gap-3 text-white text-4xl md:text-5xl font-black py-3 px-8 rounded-2xl mb-5 tracking-tight"
               style={{ background: "rgba(255,255,255,0.12)", border: "2px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/assets/dokidokitools_logo.png" alt="" style={{ height: "48px", width: "auto" }} />
               DokiDokiTools
             </h1>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
@@ -286,7 +290,9 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="w-full py-10 flex flex-col items-center gap-3" style={{ background: "#1E0A3C" }}>
-          <span className="text-base font-black" style={{ color: "#fff" }}>
+          <span className="flex items-center gap-2 text-base font-black" style={{ color: "#fff" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/dokidokitools_logo.png" alt="" style={{ height: "28px", width: "auto" }} />
             DokiDoki<span style={{ color: "#FF9800" }}>Tools</span>
           </span>
           <p className="text-xs font-medium" style={{ color: "#A78BFA" }}>
