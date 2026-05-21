@@ -2,7 +2,7 @@
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const SITE_URL = "https://dokidokitools.vercel.app";
-  const lastMod = new Date("2026-04-28");
+  const lastMod = new Date();
 
   return [
     { url: SITE_URL, lastModified: lastMod, changeFrequency: "weekly", priority: 1 },
