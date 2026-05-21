@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IP Address Checker Free 窶・What Is My IP? | DokiDokiTools</title>
-    <meta name="description" content="Find your public IP address, ISP, and location instantly with Network Inspector. Free online IP checker 窶・no login, real-time results, works in your browser.">
+    <title>What Is My IP Address — Free IP Checker &amp; Network Inspector | DokiDokiTools</title>
+    <meta name="description" content="Find your public IP address, ISP, and approximate location instantly. Free online IP address checker and network inspector — real-time results, no login required.">
     <link rel="canonical" href="https://dokidokitools.vercel.app/tools/ip-checker/index.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dokidokitools.vercel.app/tools/ip-checker/index.html">
     <meta property="og:title" content="What Is My IP Address? Free IP Checker | DokiDokiTools">
     <meta property="og:description" content="Check your public IP address, ISP, and location instantly. Free online IP lookup tool.">
     <meta property="og:site_name" content="DokiDokiTools">
+    <meta property="og:image" content="https://dokidokitools.vercel.app/opengraph-image">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="What Is My IP? Free IP Checker | DokiDokiTools">
     <meta name="twitter:description" content="Find your public IP address and location instantly. Free online IP checker, no login required.">
@@ -20,7 +21,7 @@
       "@graph": [
         {
           "@type": "WebApplication",
-          "name": "Network Inspector 窶・IP Address & Location Checker",
+          "name": "Network Inspector — IP Address &amp; Location Checker",
           "url": "https://dokidokitools.vercel.app/tools/ip-checker/index.html",
           "description": "Check your public IP address, ISP, and location instantly. Free browser-based network tool.",
           "applicationCategory": "UtilityApplication",
@@ -29,12 +30,19 @@
           "creator": { "@type": "Organization", "name": "DokiDokiTools", "url": "https://dokidokitools.vercel.app" }
         },
         {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dokidokitools.vercel.app" },
+            { "@type": "ListItem", "position": 2, "name": "IP Address Checker", "item": "https://dokidokitools.vercel.app/tools/ip-checker/index.html" }
+          ]
+        },
+        {
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "What is my IP address?", "acceptedAnswer": { "@type": "Answer", "text": "Your public IP address is the unique identifier assigned to your internet connection by your ISP. Visit Network Inspector to see your current IP address instantly." } },
-            { "@type": "Question", "name": "Can I check my location from my IP address?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Network Inspector shows an approximate location (city/country) based on your IP address using geolocation databases." } },
-            { "@type": "Question", "name": "What is an ISP?", "acceptedAnswer": { "@type": "Answer", "text": "ISP stands for Internet Service Provider 窶・the company that provides your internet connection (e.g. AT&T, Comcast, Verizon, NTT)." } },
-            { "@type": "Question", "name": "Is the IP checker free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Network Inspector is completely free. No account or login is required." } }
+            { "@type": "Question", "name": "What is my IP address?", "acceptedAnswer": { "@type": "Answer", "text": "Your public IP address is the unique identifier assigned to your internet connection by your ISP. Visit Network Inspector and your IP address is displayed instantly." } },
+            { "@type": "Question", "name": "What is an ISP?", "acceptedAnswer": { "@type": "Answer", "text": "ISP stands for Internet Service Provider — the company that provides your internet connection, such as Comcast, AT&T, Verizon, or a local provider." } },
+            { "@type": "Question", "name": "Can I check if my VPN is working with this tool?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If your VPN is active, your IP address will show as your VPN server's IP and the location will reflect the VPN server location rather than your real location." } },
+            { "@type": "Question", "name": "Is the IP checker free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free. No account or login is required. Your IP address loads automatically when you open the page." } }
           ]
         }
       ]
@@ -210,10 +218,7 @@
 
         <!-- Header -->
         <header class="text-center">
-            <h1 class="font-display font-bold text-5xl md:text-6xl tracking-wide mb-3" style="text-shadow:0 4px 12px rgba(0,0,0,0.5);">
-                <span class="text-jelly-blue">NETWORK</span>
-                <span class="text-white"> INSPECTOR</span>
-            </h1>
+            <h1 class="font-display font-bold text-5xl md:text-6xl tracking-wide mb-3" style="text-shadow:0 4px 12px rgba(0,0,0,0.5);">What Is My IP Address?</h1>
             <p class="font-display font-semibold text-white/40 text-lg uppercase tracking-widest">
                 Your connection at a glance
             </p>
@@ -320,6 +325,43 @@
         </div>
     </section>
 
+    <!-- SEO Content Section -->
+    <section style="max-width:800px;margin:0 auto 3rem;padding:0 1.5rem;font-family:inherit;">
+      <h2 style="font-size:1.5rem;font-weight:900;color:#1C1C1C;margin-bottom:1rem;">About the Free IP Address Checker</h2>
+      <p style="color:#4B5563;line-height:1.7;margin-bottom:1rem;">
+        The DokiDokiTools Network Inspector is a free online IP address checker that instantly shows your public IP address, Internet Service Provider (ISP), and approximate geographic location. There is nothing to install — open the page and your IP details load automatically.
+      </p>
+      <p style="color:#4B5563;line-height:1.7;margin-bottom:1rem;">
+        This tool is useful for <strong>troubleshooting network issues</strong>, <strong>verifying that your VPN is working</strong> (your IP should show as the VPN server's location when connected), or simply satisfying curiosity about your online identity. The location shown is approximate and based on publicly available IP geolocation data — it shows city and country, not your precise street address.
+      </p>
+      <p style="color:#4B5563;line-height:1.7;margin-bottom:1.5rem;">
+        No login, no account, and no personal data is stored. The IP address lookup is performed securely and the result is displayed only to you.
+      </p>
+
+      <h2 style="font-size:1.25rem;font-weight:900;color:#1C1C1C;margin-bottom:0.75rem;">How to Check Your IP Address</h2>
+      <ol style="color:#4B5563;line-height:1.9;padding-left:1.5rem;margin-bottom:1.5rem;">
+        <li>Open the Network Inspector page</li>
+        <li>Your public IP address loads automatically within seconds</li>
+        <li>Your ISP name and approximate location are shown below</li>
+        <li>Connect a VPN and refresh to verify the VPN is masking your real IP</li>
+      </ol>
+
+      <h2 style="font-size:1.25rem;font-weight:900;color:#1C1C1C;margin-bottom:0.75rem;">Frequently Asked Questions</h2>
+      <div style="margin-bottom:1rem;">
+        <h3 style="font-weight:700;color:#1C1C1C;margin-bottom:0.25rem;">What is the difference between a public and private IP address?</h3>
+        <p style="color:#4B5563;line-height:1.7;">Your public IP is the address your router shows to the internet — visible to websites you visit. Your private IP is the internal address your router assigns to your device on your home network and is not visible externally.</p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <h3 style="font-weight:700;color:#1C1C1C;margin-bottom:0.25rem;">Does this tool show my exact location?</h3>
+        <p style="color:#4B5563;line-height:1.7;">No. IP geolocation is approximate — typically accurate to city level but not to a street address. The location shown is the registered location of your ISP's network, which may differ from your physical location.</p>
+      </div>
+      <p style="margin-top:1.5rem;color:#6B7280;font-size:0.875rem;">
+        More free tools: <a href="/" style="color:#6B21A8;font-weight:700;">DokiDokiTools Home</a> &middot;
+        <a href="/tools/username-generator/index.html" style="color:#6B21A8;font-weight:700;">Username Generator</a> &middot;
+        <a href="/tools/recipe-scaler/index.html" style="color:#6B21A8;font-weight:700;">Recipe Scaler</a>
+      </p>
+    </section>
+
     <footer class="w-full py-12 text-center border-t border-white/5">
         <div class="flex justify-center gap-10 mb-4 font-display font-semibold text-sm uppercase tracking-widest text-white/25">
             <a href="/" class="hover:text-jelly-blue transition-colors">Home</a>
@@ -327,7 +369,7 @@
             <a href="../shared/privacy.html" class="hover:text-jelly-blue transition-colors">Privacy</a>
             <a href="../shared/cookie.html" class="hover:text-jelly-blue transition-colors">Cookies</a>
         </div>
-        <p class="font-display text-white/15 text-sm tracking-widest">&copy; 2026 Network Inspector 窶｢ DokiDokiTools</p>
+        <p class="font-display text-white/15 text-sm tracking-widest">&copy; 2026 DokiDokiTools</p>
         <div class="w-32 h-1 bg-white/10 rounded-full mx-auto mt-6"></div>
     </footer>
 
