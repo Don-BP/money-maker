@@ -120,11 +120,11 @@ export default function Home() {
           animation: logo-float 3s ease-in-out infinite, logo-glow 5s linear infinite;
           cursor: pointer;
         }
-        /* inner: overflow:hidden clips the shimmer without touching the glow */
+        /* inner: clip-path clips shimmer reliably even with filter on ancestor */
         .logo-shimmer-clip {
           display: inline-block;
           position: relative;
-          overflow: hidden;
+          clip-path: inset(0);
         }
         .logo-shimmer-clip::before {
           content: '';
