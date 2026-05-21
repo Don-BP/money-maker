@@ -1,16 +1,30 @@
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "DokiDokiTools — Free Online Utilities",
-  "url": "https://dokidokitools.vercel.app",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Username Generator", "url": "https://dokidokitools.vercel.app/tools/username-generator/index.html" },
-    { "@type": "ListItem", "position": 2, "name": "Word Finder", "url": "https://dokidokitools.vercel.app/tools/word-finder/index.html" },
-    { "@type": "ListItem", "position": 3, "name": "Recipe Scaler", "url": "https://dokidokitools.vercel.app/tools/recipe-scaler/index.html" },
-    { "@type": "ListItem", "position": 4, "name": "Romaji to Kana", "url": "https://dokidokitools.vercel.app/tools/romaji-to-kana/index.html" },
-    { "@type": "ListItem", "position": 5, "name": "Network Inspector", "url": "https://dokidokitools.vercel.app/tools/ip-checker/index.html" },
-    { "@type": "ListItem", "position": 6, "name": "Word Search Maker", "url": "https://dokidokitools.vercel.app/tools/word-search/index.html" }
-  ]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "DokiDokiTools",
+      "url": "https://dokidokitools.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dokidokitools.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "ItemList",
+      "name": "DokiDokiTools — Free Online Utilities",
+      "url": "https://dokidokitools.vercel.app",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Username Generator", "url": "https://dokidokitools.vercel.app/tools/username-generator/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Word Finder", "url": "https://dokidokitools.vercel.app/tools/word-finder/index.html" },
+        { "@type": "ListItem", "position": 3, "name": "Recipe Scaler", "url": "https://dokidokitools.vercel.app/tools/recipe-scaler/index.html" },
+        { "@type": "ListItem", "position": 4, "name": "Romaji to Kana", "url": "https://dokidokitools.vercel.app/tools/romaji-to-kana/index.html" },
+        { "@type": "ListItem", "position": 5, "name": "Network Inspector", "url": "https://dokidokitools.vercel.app/tools/ip-checker/index.html" },
+        { "@type": "ListItem", "position": 6, "name": "Word Search Maker", "url": "https://dokidokitools.vercel.app/tools/word-search/index.html" },
+      ],
+    },
+  ],
 };
 
 const tools = [
@@ -124,12 +138,12 @@ export default function Home() {
           />
 
           <div className="relative z-10 flex flex-col items-center text-center px-4 pb-16">
-            <div
+            <h1
               className="inline-block text-white text-4xl md:text-5xl font-black py-3 px-8 rounded-2xl mb-5 tracking-tight"
               style={{ background: "rgba(255,255,255,0.12)", border: "2px solid rgba(255,255,255,0.25)", backdropFilter: "blur(8px)" }}
             >
               DokiDokiTools
-            </div>
+            </h1>
             <p className="text-lg font-bold mb-2" style={{ color: "#E9D5FF" }}>
               Free, instant online utilities
             </p>
