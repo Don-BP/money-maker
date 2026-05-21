@@ -191,7 +191,7 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 flex flex-col items-center text-center px-4 pb-16">
+          <div className="relative z-10 flex flex-col items-center text-center px-4 pb-8 sm:pb-16">
             <h1 className="logo-hero-wrap mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="logo-hero-img" src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "clamp(60px, 18vw, 110px)", width: "auto", maxWidth: "90vw" }} />
@@ -228,8 +228,8 @@ export default function Home() {
         </header>
 
         {/* Tool Grid */}
-        <main className="w-full max-w-5xl mx-auto px-4 pt-10 pb-24 flex-grow">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <main className="w-full max-w-5xl mx-auto px-4 pt-4 sm:pt-10 pb-12 sm:pb-24 flex-grow">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {tools.map((tool) => (
               <a
                 key={tool.id}
@@ -243,12 +243,12 @@ export default function Home() {
               >
                 {/* Card top — purple gradient with icon */}
                 <div
-                  className="flex items-center justify-center py-8 relative"
+                  className="flex items-center justify-center py-4 sm:py-8 relative"
                   style={{ background: "linear-gradient(135deg, #6B21A8 0%, #A855F7 100%)" }}
                 >
-                  <span className="text-5xl">{tool.icon}</span>
+                  <span className="text-3xl sm:text-5xl">{tool.icon}</span>
                   <span
-                    className="absolute top-3 right-3 text-xs font-black px-2 py-1 rounded-full"
+                    className="absolute top-2 right-2 text-xs font-black px-2 py-0.5 rounded-full"
                     style={{ background: "#FF9800", color: "#fff" }}
                   >
                     {tool.badge}
@@ -256,18 +256,18 @@ export default function Home() {
                 </div>
 
                 {/* Card body */}
-                <div className="flex flex-col flex-grow px-6 py-5">
-                  <h2 className="font-black text-lg mb-1" style={{ color: "#1C1C1C" }}>
+                <div className="flex flex-col flex-grow px-3 py-3 sm:px-6 sm:py-5">
+                  <h2 className="font-black text-sm sm:text-lg mb-1" style={{ color: "#1C1C1C" }}>
                     {tool.name}
                   </h2>
-                  <p className="text-sm font-medium mb-5 flex-grow" style={{ color: "#6B7280" }}>
+                  <p className="hidden sm:block text-sm font-medium mb-5 flex-grow" style={{ color: "#6B7280" }}>
                     {tool.description}
                   </p>
                   <div
-                    className="w-full text-center text-sm font-black uppercase tracking-widest py-3 rounded-2xl"
+                    className="w-full text-center text-xs sm:text-sm font-black uppercase tracking-widest py-2 sm:py-3 rounded-2xl mt-2 sm:mt-0"
                     style={{ background: "#6B21A8", color: "#fff", boxShadow: "0 4px 0 0 #4C1272" }}
                   >
-                    Open Tool →
+                    Open →
                   </div>
                 </div>
               </a>
