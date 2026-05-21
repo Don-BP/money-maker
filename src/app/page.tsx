@@ -132,7 +132,8 @@ export default function Home() {
           inset: 0;
           background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.7) 50%, transparent 70%);
           background-size: 200% 100%;
-          background-position: -100% center;
+          background-repeat: no-repeat;
+          background-position: 300% center;
           -webkit-mask-image: url('/assets/Dokidoki%20tools%20wide%20logo.png');
           mask-image: url('/assets/Dokidoki%20tools%20wide%20logo.png');
           -webkit-mask-size: 100% 100%;
