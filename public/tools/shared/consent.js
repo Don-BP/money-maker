@@ -116,7 +116,7 @@
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
       <p>
-        🍪 ZenithTools uses cookies to display ads that keep our tools free, and for analytics.
+        🍪 DokiDoki.Tools uses cookies to display ads that keep our tools free, and for analytics.
         By clicking <strong>"Accept All"</strong>, you consent to our use of cookies.
         <a href="/tools/shared/cookie.html">Cookie Policy</a> &nbsp;|&nbsp;
         <a href="/tools/shared/privacy.html">Privacy Policy</a>

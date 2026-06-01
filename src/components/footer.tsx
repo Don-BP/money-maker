@@ -11,9 +11,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
             <div className="text-2xl font-black font-outfit tracking-tighter mb-2">
-              Zenith<span className="text-indigo-600">Tools</span>
+              DokiDoki<span className="text-indigo-600">.Tools</span>
             </div>
-            <p className="text-sm text-slate-500">© 2026 ZenithTools Automated Portfolio. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 DokiDoki.Tools. All rights reserved.</p>
           </div>
           
           <div className="flex gap-12 text-sm font-bold text-slate-400 uppercase tracking-widest">

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | ZenithTools",
-    default: "Legal | ZenithTools",
+    template: "%s | DokiDoki.Tools",
+    default: "Legal | DokiDoki.Tools",
   },
   robots: { index: true, follow: true },
 };
