@@ -164,9 +164,10 @@ export default function Home() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/assets/Dokidoki tools wide logo.png" alt="DokiDokiTools" style={{ height: "40px", width: "auto" }} />
             </span>
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C4B5FD" }}>
-              Free Utilities
-            </span>
+            <div className="flex items-center gap-6">
+              <a href="/guides" className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C4B5FD", textDecoration: "none" }}>Guides</a>
+              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C4B5FD" }}>Free Utilities</span>
+            </div>
           </div>
         </nav>
 
